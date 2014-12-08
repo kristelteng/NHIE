@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     else
       Event.order("events.created_at DESC")
     end.page(params[:page])
-    
+
   end
 
   def new
@@ -13,9 +13,17 @@ class EventsController < ApplicationController
   end
 
   def create
+    @event = Event.new(event_params)
+    if @event.save
+      redirect_to events_url(@event.id)
+    else 
+      render :new
+    end
+
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   def edit
@@ -27,4 +35,11 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to event_path
   end
+
+
+private
+  def event_params
+      params.require(:event).permit(:name, :description, :datetime, :location, :url)
+  end
+
 end
