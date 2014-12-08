@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def show
   end
 
-  def edit
+  def edit 
   end
 
   def destroy

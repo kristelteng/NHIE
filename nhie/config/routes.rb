@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :users 
   resources :events
 
-  get 'login' => 'users_sessions#new', as: 'login'
-  get 'logout' => 'users_sessions#destroy', as: 'logout'
+  get 'login' => 'user_sessions#new', as: 'login'
+  get 'logout' => 'user_sessions#destroy', as: 'logout'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
