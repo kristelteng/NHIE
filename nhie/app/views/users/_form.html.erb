@@ -1,9 +1,11 @@
 <!-- added errors messages -->
-<% if !@user.errors.messages.blank? %>
-  <% @user.errors.messages.each do |message| %>
-    <%= message %><br/>
+<% if !@user.errors.messages.blank? %> 
+  <% @user.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %><br/>
+    </div>
   <% end %>
-<% end %>
+<% end %> 
 
 <%= form_for @user do |f| %>
   <div class="field">
