@@ -5,5 +5,8 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   validates :username, uniqueness: true
 
+  # added validation true for image
+  validates :image, presence: true
+
   has_many :events
 end
