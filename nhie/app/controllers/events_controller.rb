@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_filter :ensure_logged_in
+
   def index
     @events = if params[:search]
       Events.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
