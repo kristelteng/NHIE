@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- error messages for checking -->
+<!-- checking for error messages -->
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
     <%= content_tag :div, msg, :class => "flash_#{name}" %>
