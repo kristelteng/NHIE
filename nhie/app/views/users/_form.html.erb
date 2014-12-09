@@ -5,7 +5,7 @@
       <%= message %><br/>
     </div>
   <% end %>
-<% end %> 
+<% end %><br/>
 
 <%= form_for @user do |f| %>
   <div class="field">
@@ -25,7 +25,8 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <!-- change it to email_field -->
+    <%= f.email_field :email %>
   </div>
   
   <div class="field">
@@ -40,7 +41,9 @@
 
   <div class="field">
     <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <!-- <%= f.file_field :image %> -->
+    <%= f.url_field :image %>
+
   </div>
 
   <div class="field">

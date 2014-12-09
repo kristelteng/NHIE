@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       auto_login(@user)
       redirect_to events_url, {notice: "Signed up!"}
     else
-      flash.now[:alert] = "Reg failed!"
+      flash.now[:alert] = "Error: could not complete the request."
       render "new"
     end
   end
