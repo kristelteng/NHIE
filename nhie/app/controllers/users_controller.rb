@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :ensure_logged_in
+  before_filter :ensure_logged_in, except: [:create, :new]
   def index
   end
 
