@@ -1,2 +1,7 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+	<div>
+		<h1><%= @event.event_name %></h1>
+		<p>Description: <%= @event.description %></p>
+		<p>Event Date: <%= @event.event_datetime %></p>
+		<p>Location: <%= @event.location %></p>
+		<p>Website: <%= @event.url %></p>
+	</div>
