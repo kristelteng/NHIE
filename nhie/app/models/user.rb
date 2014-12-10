@@ -8,15 +8,11 @@ class User < ActiveRecord::Base
   # added validation true for image
   validates :image, presence: true
 
-  has_many :friends, :through => :friendships
-  has_many :friendships
-  
-  has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
-  has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+  has_many :friends, :through => :friendships, :conditions => "'status = 'accepted'" 
+  has_many :requested_friends, :through => :friendships, :source => :friends, :conditions => "status = 'requested'"
+  has_many :pending_friends, :through => :friendships, :source => :friends, :conditions => "status = 'pending'"
+  has_many :friendships, :dependent => :destroy
 
   has_many :events, :through => :friends, :class_name => 'Event', :source => :events
   has_many :events
-  
-  has_many
-  # has_many :comments
 end
