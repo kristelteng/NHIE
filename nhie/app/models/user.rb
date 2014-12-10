@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :friends, :through => :friendships
   has_many :friendships
-  has_many :events, :through => :friends, class_name: 'Event', source => :events
+  has_many :events, :through => :friends, :class_name => 'Event', :source => :events
   has_many :events
   # has_many :comments
-
 end
