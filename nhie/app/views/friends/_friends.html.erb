@@ -1,0 +1,10 @@
+<% unless @user.friends.empty? %>
+  <% @user.friends.each do |user| %>
+  <%= link_to user.login, user_path(user.id) %>
+    <% if logged_in? && @user = current_user %>
+      <%= link_to '[Remove]', user_friend_path(:user_id => current_user, :id => user), :method => :delete, :confirm => 'Are you sure?' %>
+    <% end %>
+  <% end %>
+    <% else %>
+  <p>You don't have any friends!</p>
+<% end %>

@@ -1,2 +1,21 @@
-<h1>Friends#index</h1>
-<p>Find me in app/views/friends/index.html.erb</p>
+<h1>My Friends:</h1>
+
+<% unless @user == current_user %>
+  <p>You do not have permission to access this page!</p>
+<% else %>
+  
+  <h3>Current Friends:</h3>
+  <div class ="friends">
+    <%= render :partial => 'friends/friends' %>
+  </div>
+  
+  <h3>Requested Friends:</h3>
+  <div class ="friends">
+    <%= render :partial => 'friends/requested_friends' %>
+  </div>
+  
+  <h3>Pending Friends:</h3>
+  <div class ="friends">
+    <%= render :partial => 'friends/pending_friends' %>
+  </div>
+<% end %>
