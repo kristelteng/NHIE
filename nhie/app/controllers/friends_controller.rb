@@ -13,7 +13,7 @@ class FriendsController < ApplicationController
   end
 
   def create
-    @user = User.find(current_user)
+    @user = current_user
     @friend = User.find(params[:friend_id])
     params[:friendship1] = {:user_id => @user.id, :friend_id => @friend.id, :status => 'requested'}
     params[:friendship2] = {:user_id => @friend.id, :friend_id => @user.id, :status => 'pending'}
@@ -26,11 +26,23 @@ class FriendsController < ApplicationController
       end
   end
 
+  def approve
+    friend = User.find(params[:id])
+    current_user.approve_friendship(friend)
+  end
+
+  def reject
+    friend = User.find(params[:id])
+    current_user.reject_friendship(friend)
+  end
+
+
   def destroy
     @user = User.find(params[:user_id])
     @friend = User.find(params[:id])
-    @friendship1 = @user.friendships.find_by_friend_id(params[:id]).destroy
-    @friendship2 = @friend.friendships.find_by_user_id(params[:id]).destroy
+
+    @user.unfriend(@friend)
+
     redirect_to user_friends_path(:user_id => current_user)
   end
 
