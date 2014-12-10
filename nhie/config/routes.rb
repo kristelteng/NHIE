@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
-  get 'friendships/new'
-
-  get 'friendships/create'
-
-  get 'friendships/show'
-
-  get 'friendships/index'
-
-  get 'friendships/destroy'
 
   root 'events#index'
+
   resources :users 
   resources :events
   resources :user_sessions
+  resources :friendships
+
   get 'login' => 'user_sessions#new', as: 'login'
   get 'logout' => 'user_sessions#destroy', as: 'logout'
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

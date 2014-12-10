@@ -1,2 +1,14 @@
-<h1>Friendships#new</h1>
-<p>Find me in app/views/friendships/new.html.erb</p>
+<h1>Make a New Friend</h1>
+
+<% if @friend %>
+	<%= @friend.name %>
+	<p>Do you want to be pals with <%= @friend.name %> ?</p>
+	
+	<div><%= form_for @friendship, method: :post do |form| %>
+		<%= form.hidden_field :friend_id, @friend.id %>
+		<%= submit_tag 'Yes SIR!' %>
+		<%= link_to 'Cancel', user_path(@user) %>
+	</div>
+
+	<% end %> 
+<% end %> 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210140108) do
+ActiveRecord::Schema.define(version: 20141210144022) do
 
   create_table "events", force: true do |t|
     t.text     "description"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20141210140108) do
   create_table "friendships", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.boolean  "approved"
   end
 
   create_table "users", force: true do |t|

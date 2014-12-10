@@ -17,4 +17,46 @@ password_confirmation: "1234",
 image: "Blank"
 )
 
+User.create!(
+first_name: "Pam",
+last_name: "Marker",
+username: "pammy",
+email: "pammymaker@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
 
+User.create!(
+first_name: "Roger",
+last_name: "McRogington",
+username: "rogy",
+email: "rogy@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
+
+Event.create!(
+event_name: "Go to Wonderland",
+description: "I've never been, and im also scared of roller coasters",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Woodbridge, On",
+url: "www.wonderland.ca",
+)
+
+Event.create!(
+event_name: "Roller Disco",
+description: "Can someone just take me out and dance disco with me already?",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Mississauga, On",
+url: "www.scootersrollerpalace.ca",
+)
+
+Event.create!(
+event_name: "Go to Las Vagas",
+description: "What happens there.. well you know.",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Las Vags, Navada",
+url: "www.lasvagas.ca",
+)
