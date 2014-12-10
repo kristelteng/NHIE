@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-
   root 'events#index'
 
-  resources :users 
+  resources :users do |user|
+    resources :friends 
+  end
+
   resources :events
   resources :user_sessions
   resources :friendships
