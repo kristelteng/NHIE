@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'friendships/new'
+
+  get 'friendships/create'
+
+  get 'friendships/show'
+
+  get 'friendships/index'
+
+  get 'friendships/destroy'
+
   root 'events#index'
   resources :users 
   resources :events
