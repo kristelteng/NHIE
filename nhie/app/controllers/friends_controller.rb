@@ -32,7 +32,6 @@ class FriendsController < ApplicationController
     @friendship1 = @user.friendships.find_by_friend_id(params[:id]).destroy
     @friendship2 = @friend.friendships.find_by_user_id(params[:id]).destroy
     redirect_to user_friends_path(:user_id => current_user)
-end
   end
 
   def update

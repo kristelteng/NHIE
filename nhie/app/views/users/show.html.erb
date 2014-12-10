@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Users show</h1>
+<% if logged_in? %>
+  <% unless @user == current_user || current_user.requested_friends.include?(@user) || current_user.friends.include?(@user) || current_user.pending_friends.include?(@user) %>
+    <% form_for(:friendship, :url => user_friends_path(:user_id => current_user.id, :friend_id => @user.id)) do |f| %>
+      <%= submit_tag "Add to My Friends" %>
+    <% end %>
+  <% end %>
+<% end %>

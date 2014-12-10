@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 gem 'sorcery'
 gem 'kaminari'
 gem 'pry-rails'
+gem 'quiet_assets'
+# gem 'binding_of_caller'
+# gem 'better_errors'
