@@ -61,6 +61,10 @@ class User < ActiveRecord::Base
     f.destroy
   end
 
+  def already_requested?(other)
+    !!outgoing_friend_requests.find_by(friend: other)
+  end
+
   def friends?(other)
     friends.include? other
   end

@@ -1,22 +1,24 @@
 <h1><%= @user.first_name %></h1>
 
+
+
+<!-- Shows only the current users created events -->
 <% @user.events.each do |event| %>
  <!-- This(below) needs to show links to the users events -->
 	<%= event.event_name %>
 	<br/>
 <% end %>
 
-
-	<% if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
-
-<!-- Need to clean this commented out code up(should work with submit button to create friendship. Use the enfriend method?) -->
+<!-- Only shows 'Add Friend' button if: you aren't already friends or you havent already requested to be friends.  -->
+	<%# if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
     
     <%# form_for(:friendship, :url => user_friends_path(:user_id => current_user.id, :friend_id => @user.id)) do |f| %>
-      <%= submit_tag "Add to My Friends" %>
+      <%#= submit_tag "Add to My Friends" %>
     <%# end %>
   <%# end %>
-<% end %>
+<%# end %>
 
+<!-- This has to change to show only friends (friendship = true) and not all users.  -->
 <div class="my-friends">
 	<%= render :partial => 'my_friends' %>
 </div>

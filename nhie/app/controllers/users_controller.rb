@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   before_filter :ensure_logged_in, except: [:create, :new]
   def index
-    @users = User.all
+    @f = current_user.friends
+    @ifr = current_user.incoming_friend_requests.map(&:friend)
+    @ofr = current_user.outgoing_friend_requests.map(&:friend)
+    @nf = User.all - @f - @ifr - @ofr - [current_user]
   end
 
   def create
@@ -20,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.all
+    @users = User.all - [current_user]
     @user = User.find(params[:id])
   end
 

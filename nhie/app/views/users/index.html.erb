@@ -1,7 +1,29 @@
 <h1>All Users</h1>
 
-<% @users.each do |user| %>
-	<div>
-		<h1><%= link_to user.first_name, user_path(user) %></h1>
-	</div>
+Signed in as <%= current_user.first_name %>
+
+<h2>My friends</h2>
+	<% @f.each do |user| %>
+		<%= render user %> 
+		<p>You guys are such good friends</p>
+	<% end %> 
+
+<% if @ifr.any? %>
+	<h2>Incoming Friends Requests</h2>
+		<% @ifr.each do |user| %>
+			<%= render user %> 
+			<%= submit_tag "Accept" %>
+		<% end %> 
 <% end %>
+
+<h2>Outgoing Friend Requests</h2>
+	<% @ofr.each do |user| %>
+		<%= render user %> 
+		<p>Waiting Response</p>
+	<% end %> 
+
+<h2>Not Friends..yet</h2>
+	<% @nf.each do |user| %>
+		<%= render user %> 
+		<%= submit_tag "Add to My Friends" %>
+	<% end %> 
