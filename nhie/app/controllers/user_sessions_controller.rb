@@ -1,6 +1,5 @@
 class UserSessionsController < ApplicationController
   def new
-    
   end
 
   def create
@@ -17,3 +16,4 @@ class UserSessionsController < ApplicationController
     redirect_to login_path, notice: "Logged out!"
   end
 end
+

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Nhie</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+		<head>
+		  <title>Nhie</title>
+		  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		  <%= csrf_meta_tags %>
+		</head>
+	<body>
+		<!-- checking for error messages -->
+		<% flash.each do |name, msg| %>
+		  <% if msg.is_a?(String) %>
+		    <%= content_tag :div, msg, :class => "flash_#{name}" %>
+		  <% end %>
+		<% end %>
 
-<!-- checking for error messages -->
-<% flash.each do |name, msg| %>
-  <% if msg.is_a?(String) %>
-    <%= content_tag :div, msg, :class => "flash_#{name}" %>
-  <% end %>
-<% end %>
+		<%= yield %>
 
-<%= yield %>
+		<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
+		<p><%= link_to("Profile", user_url(current_user)) unless current_page?(login_path) %></p>
 
-<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
-<p><%= link_to("Profile", user_url(current_user)) unless current_page?(login_path) %></p>
-
-</body>
+	</body>
 </html>

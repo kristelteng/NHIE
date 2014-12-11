@@ -36,7 +36,6 @@ class FriendsController < ApplicationController
     current_user.reject_friendship(friend)
   end
 
-
   def destroy
     @user = User.find(params[:user_id])
     @friend = User.find(params[:id])

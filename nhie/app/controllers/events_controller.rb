@@ -7,7 +7,6 @@ class EventsController < ApplicationController
     else
       Event.order("events.created_at DESC")
     end.page(params[:page])
-
   end
 
   def new
@@ -21,7 +20,6 @@ class EventsController < ApplicationController
     else 
       render :new
     end
-
   end
 
   def show
@@ -38,10 +36,8 @@ class EventsController < ApplicationController
     redirect_to event_path
   end
 
-
 private
   def event_params
       params.require(:event).permit(:event_name, :description, :event_datetime, :location, :url)
   end
-
 end
