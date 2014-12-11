@@ -15,9 +15,11 @@
 		<% end %>
 
 		<%= yield %>
-
-		<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
-		<p><%= link_to("Profile", user_url(current_user)) unless current_page?(login_path) %></p>
+		
+		<% if logged_in? %>
+			<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
+			<p><%= link_to("Profile", user_url(current_user)) %></p>
+		<% end %>
 
 	</body>
 </html>

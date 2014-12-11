@@ -1,11 +1,14 @@
 <h1><%= @user.first_name %></h1>
 
-<% @users.each do |user| %>
+<% @user.events.each do |event| %>
  <!-- This(below) needs to show links to the users events -->
-	<%= user.first_name %>
-	<% end %>
-	
-	<% unless @user == current_user || current_user.request_friendship!(@user) || current_user.friends?(@user) %>
+	<%= event.event_name %>
+	<br/>
+<% end %>
+
+
+	<%# binding.pry %>
+	<% if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
 
 <!-- Need to clean this commented out code up(should work with submit button to create friendship. Use the enfriend method?) -->
     
