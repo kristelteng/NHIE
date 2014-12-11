@@ -7,7 +7,6 @@
 <% end %>
 
 
-	<%# binding.pry %>
 	<% if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
 
 <!-- Need to clean this commented out code up(should work with submit button to create friendship. Use the enfriend method?) -->
