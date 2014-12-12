@@ -87,9 +87,6 @@ class User < ActiveRecord::Base
   end
 
 
-
-
-
   #--------------------
   # junk drawer
   #--------------------
