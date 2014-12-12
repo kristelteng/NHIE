@@ -12,20 +12,6 @@ class FriendsController < ApplicationController
     @friendship2 = Friendship.new
   end
 
-  def create
-    friend = User.find(params[:id])
-    current_user.request_friendship!(friend)
-  end
-
-  def approve
-    friend = User.find(params[:id])
-    current_user.approve_friendship(friend)
-  end
-
-  def reject
-    friend = User.find(params[:id])
-    current_user.reject_friendship(friend)
-  end
 
   def destroy
     @user = User.find(params[:user_id])

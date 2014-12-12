@@ -1,13 +1,8 @@
 <% if @user == current_user %> 
 <h1>My Friends</h1>
-	<ul>
-		<% @users.each do |user| %>
-			<% unless current_user.friends?(user) %> 
-
-				<li>
-				<%= link_to user.first_name, user_path(user) %>
-				</li>
+		<ul>
+			<% current_user.friends.each do |user| %>
+					<li><%= link_to user.first_name, user_path(user) %></li>
 			<% end %>
-		<% end %>
-	</ul>
+		</ul>
 <% end %>
