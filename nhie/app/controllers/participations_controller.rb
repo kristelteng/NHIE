@@ -19,7 +19,6 @@ class ParticipationsController < ApplicationController
   end
 
   def show
-    
   end
 
   def destroy
