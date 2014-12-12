@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212144003) do
+ActiveRecord::Schema.define(version: 20141212212902) do
 
   create_table "events", force: true do |t|
     t.text     "description"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20141212144003) do
     t.string   "first_name",                      null: false
     t.string   "last_name",                       null: false
     t.string   "username",                        null: false
-    t.string   "image",                           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_me_token"
@@ -54,6 +53,7 @@ ActiveRecord::Schema.define(version: 20141212144003) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
 
   # added validation true for image
-  validates :image, presence: true
+  # validates :image, presence: true
 
   has_many :friendships, :dependent => :destroy
   # has_many :friends, :through => :friendships, class_name: "User"
