@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'participations/index'
+
+  get 'participations/new'
+
+  get 'participations/create'
+
+  get 'participations/show'
+
+  get 'participations/destroy'
+
   root 'events#index'
 
   resources :users do |users|
