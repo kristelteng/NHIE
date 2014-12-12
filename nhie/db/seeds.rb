@@ -7,45 +7,45 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create Users 
-# User.create!(
-# first_name: "Bob",
-# last_name: "Pen",
-# username: "bp",
-# email: "bob.pen@example.com",
-# password: "1234",
-# password_confirmation: "1234",
-# image: "Blank"
-# )
+User.create!(
+first_name: "Bob",
+last_name: "Pen",
+username: "bp",
+email: "bob.pen@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
 
-# User.create!(
-# first_name: "Pam",
-# last_name: "Marker",
-# username: "pammy",
-# email: "pammymaker@example.com",
-# password: "1234",
-# password_confirmation: "1234",
-# image: "Blank"
-# )
+User.create!(
+first_name: "Pam",
+last_name: "Marker",
+username: "pammy",
+email: "pammymaker@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
 
-# User.create!(
-# first_name: "Roger",
-# last_name: "McRogington",
-# username: "rogy",
-# email: "rogy@example.com",
-# password: "1234",
-# password_confirmation: "1234",
-# image: "Blank"
-# )
+User.create!(
+first_name: "Roger",
+last_name: "McRogington",
+username: "rogy",
+email: "rogy@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
 
-# User.create!(
-# first_name: "john",
-# last_name: "bobs",
-# username: "jbob",
-# email: "job@example.com",
-# password: "1234",
-# password_confirmation: "1234",
-# image: "Blank"
-# )
+User.create!(
+first_name: "john",
+last_name: "bobs",
+username: "jbob",
+email: "job@example.com",
+password: "1234",
+password_confirmation: "1234",
+image: "Blank"
+)
 
 
 # # Make Events
@@ -75,13 +75,13 @@
 
 # Make Friendships
 
-5.times do
-	u = User.all.sample
-	f = (User.all - [u]).sample
-	Friendship.create(
-		user_id: u.id,
-		friend_id: f.id,
-		accepted: [true, false].sample
-	)
-	puts "Made friend request between #{u.first_name} and #{f.first_name}"
-end
+# 5.times do
+# 	u = User.all.sample
+# 	f = (User.all - [u]).sample
+# 	Friendship.create(
+# 		user_id: u.id,
+# 		friend_id: f.id,
+# 		accepted: [true, false].sample
+# 	)
+# 	puts "Made friend request between #{u.first_name} and #{f.first_name}"
+# end
