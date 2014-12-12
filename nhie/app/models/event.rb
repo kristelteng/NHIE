@@ -6,5 +6,8 @@ class Event < ActiveRecord::Base
 
   belongs_to :user
   has_many :users
-  
+
+  belongs_to :creator, class_name: 'User'
+  has_many :participation
+  has_many :participants, through: :participation, source: :user
 end

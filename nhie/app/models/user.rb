@@ -14,9 +14,13 @@ class User < ActiveRecord::Base
   def friends
     friendships.where(accepted: true).map(&:friend)
   end
+
+  has_many :created_events, class_name: 'Event', foreign_key: 'creator_id'
   
-  has_many :events, :through => :friends, :class_name => 'Event', :source => :events
-  has_many :events
+  has_many :participations
+  has_many :participated_events, through: :participations, source: :event
+  
+  #has_many :events, :through => :friends, :class_name => 'Event', :source => :events
 
   # %w[accepted requested pending].each do |status|
   #   define_method("#{status}_friends") do
