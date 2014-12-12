@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :ensure_logged_in, except: [:create, :new]
   def index
     @f = current_user.friends
-    @ifr = current_user.incoming_friend_requests.map(&:friend)
+    @ifr = current_user.incoming_friend_requests.map(&:user)
     @ofr = current_user.outgoing_friend_requests.map(&:friend)
     @nf = User.all - @f - @ifr - @ofr - [current_user]
   end
@@ -33,15 +33,21 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def remove
+    friend = User.find(params[:user_id])
+    current_user.unfriend!(friend)
+  end
 
   def approve
     friend = User.find(params[:user_id])
-    current_user.approve_friendship!(friend)
+    current_user.accept_friendship!(friend)
+    redirect_to users_path
   end
 
   def reject
     friend = User.find(params[:user_id])
-    current_user.reject_friendship!(friend)
+    current_user.deny_friendship!(friend)
+    redirect_to users_path
   end
 
   def request_friendship

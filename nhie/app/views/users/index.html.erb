@@ -6,15 +6,16 @@ Signed in as <%= current_user.first_name %>
 	<% @f.each do |user| %>
 		<%= render user %> 
 		<p>You guys are such good friends</p>
+		<%= button_to "Remove Friend", user_remove_path(user), method: :post %>
+	<% end %> 
+ 
+<h2>Incoming Friends Requests</h2>
+	<% @ifr.each do |user| %>
+		<%= render user %> 
+		<%= button_to "Accept", user_approve_path(user), method: :post %>
+		<%= button_to "Reject", user_reject_path(user), method: :post %>
 	<% end %> 
 
-<% if @ifr.any? %>
-	<h2>Incoming Friends Requests</h2>
-		<% @ifr.each do |user| %>
-			<%= render user %> 
-			<%= submit_tag "Accept" %>
-		<% end %> 
-<% end %>
 
 <h2>Outgoing Friend Requests</h2>
 	<% @ofr.each do |user| %>

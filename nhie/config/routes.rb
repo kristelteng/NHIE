@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do |users|
     post :approve 
     post :reject
+    post :remove
     post :request_friendship
   end
   resources :events
