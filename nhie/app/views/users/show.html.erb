@@ -3,7 +3,7 @@
 
 
 <!-- Shows only the current users created events -->
-<% @user.events.each do |event| %>
+<% @user.created_events.each do |event| %>
  <!-- This(below) needs to show links to the users events -->
 	<%= event.event_name %>
 	<br/>
