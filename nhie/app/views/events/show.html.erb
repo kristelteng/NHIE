@@ -4,4 +4,6 @@
 		<p>Event Date: <%= @event.event_datetime %></p>
 		<p>Location: <%= @event.location %></p>
 		<p>Website: <%= @event.url %></p>
+    <%= button_to "Join Event", event_join_path(@event), method: :post %>
+
 	</div>

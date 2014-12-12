@@ -23,6 +23,13 @@ class EventsController < ApplicationController
     end
   end
 
+  def join
+    event = Event.find(params[:event_id])
+    current_user.participate_in!(event)
+    redirect_to users_path
+  end
+
+
   def show
     @event = Event.find(params[:id])
   end

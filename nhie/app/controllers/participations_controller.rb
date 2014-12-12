@@ -10,7 +10,7 @@ class ParticipationsController < ApplicationController
 
   def create
     @participation = Participation.new(participation_params)
-    @participation.user_id = current_user.id 
+    @participation.user = current_user
       if @participation.save
         redirect_to events_path
       else
@@ -20,6 +20,7 @@ class ParticipationsController < ApplicationController
 
   def show
   end
+
 
   def destroy
     @participation = Participation.find(params[:id])

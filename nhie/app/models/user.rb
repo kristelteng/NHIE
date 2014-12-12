@@ -36,6 +36,11 @@ class User < ActiveRecord::Base
   #   Friendship.where(user: self)
   # end
 
+
+  #--------------------
+  # friend stuff
+  #--------------------
+
   def outgoing_friend_requests
     # outgoing.select {|f| not incoming.include?(f) }
     # me -> someone
@@ -72,6 +77,23 @@ class User < ActiveRecord::Base
   def friends?(other)
     friends.include? other
   end
+
+  #--------------------
+  # event stuff
+  #--------------------
+
+  def participate_in!(event)
+    event.participation.create(user: self)
+  end
+
+
+
+
+
+  #--------------------
+  # junk drawer
+  #--------------------
+
 
   # Warning: This is for admin use
   def enfriend!(friend)

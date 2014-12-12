@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     post :request_friendship
   end
   
-  resources :events
+
+  resources :events do |events|
+    post :join
+  end
   resources :user_sessions
   resources :participations
   
