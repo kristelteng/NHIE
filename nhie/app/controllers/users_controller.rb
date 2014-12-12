@@ -33,6 +33,23 @@ class UsersController < ApplicationController
   def destroy
   end
 
+
+  def approve
+    friend = User.find(params[:user_id])
+    current_user.approve_friendship!(friend)
+  end
+
+  def reject
+    friend = User.find(params[:user_id])
+    current_user.reject_friendship!(friend)
+  end
+
+  def request_friendship
+    friend = User.find(params[:user_id])
+    current_user.request_friendship!(friend)
+    redirect_to users_path
+  end
+
 private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :username, :image)

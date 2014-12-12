@@ -13,17 +13,8 @@ class FriendsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @friend = User.find(params[:friend_id])
-    params[:friendship1] = {:user_id => @user.id, :friend_id => @friend.id, :status => 'requested'}
-    params[:friendship2] = {:user_id => @friend.id, :friend_id => @user.id, :status => 'pending'}
-    @friendship1 = Friendship.create(params[:friendship1])
-    @friendship2 = Friendship.create(params[:friendship2])
-      if @friendship1.save && @friendship2.save
-        redirect_to user_friends_path(current_user)
-      else
-        redirect_to user_path(current_user)
-      end
+    friend = User.find(params[:id])
+    current_user.request_friendship!(friend)
   end
 
   def approve

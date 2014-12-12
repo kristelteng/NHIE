@@ -25,5 +25,5 @@ Signed in as <%= current_user.first_name %>
 <h2>Not Friends..yet</h2>
 	<% @nf.each do |user| %>
 		<%= render user %> 
-		<%= submit_tag "Add to My Friends" %>
+		<%= button_to "Add to My Friends", user_request_friendship_path(user), method: :post %>
 	<% end %> 

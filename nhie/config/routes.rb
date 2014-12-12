@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   root 'events#index'
 
-  resources :users do |user|
-    resources :friends 
+  resources :users do |users|
+    post :approve 
+    post :reject
+    post :request_friendship
   end
-
   resources :events
   resources :user_sessions
-  resources :friendships
+
+
 
   get 'login' => 'user_sessions#new', as: 'login'
   get 'logout' => 'user_sessions#destroy', as: 'logout'
