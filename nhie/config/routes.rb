@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  get 'participations/index'
-
-  get 'participations/new'
-
-  get 'participations/create'
-
-  get 'participations/show'
-
-  get 'participations/destroy'
-
   root 'events#index'
 
   resources :users do |users|
@@ -17,11 +7,11 @@ Rails.application.routes.draw do
     post :remove
     post :request_friendship
   end
+  
   resources :events
   resources :user_sessions
-
-
-
+  resources :participations
+  
   get 'login' => 'user_sessions#new', as: 'login'
   get 'logout' => 'user_sessions#destroy', as: 'logout'
 
