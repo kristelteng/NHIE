@@ -26,7 +26,7 @@ class EventsController < ApplicationController
   def join
     event = Event.find(params[:event_id])
     current_user.participate_in!(event)
-    redirect_to users_path
+    redirect_to current_user
   end
 
 
