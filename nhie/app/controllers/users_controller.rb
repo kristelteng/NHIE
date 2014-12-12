@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   def remove
     friend = User.find(params[:user_id])
     current_user.unfriend!(friend)
+    redirect_to users_path
   end
 
   def approve

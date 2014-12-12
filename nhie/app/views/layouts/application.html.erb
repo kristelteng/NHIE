@@ -19,6 +19,8 @@
 		<% if logged_in? %>
 			<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
 			<p><%= link_to("Profile", user_url(current_user)) %></p>
+			<p><%= link_to("Users", users_url) %></p>
+
 		<% end %>
 
 	</body>
