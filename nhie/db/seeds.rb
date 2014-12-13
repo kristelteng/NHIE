@@ -48,30 +48,33 @@ image: "Blank"
 )
 
 
-# # Make Events
-# Event.create!(
-# event_name: "Go to Wonderland",
-# description: "I've never been, and im also scared of roller coasters",
-# event_datetime: "2015-01-15 14:48:00.000000",
-# location: "Woodbridge, On",
-# url: "www.wonderland.ca",
-# )
+# Make Events
+Event.create!(
+event_name: "Go to Wonderland",
+description: "I've never been, and im also scared of roller coasters",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Woodbridge, On",
+url: "www.wonderland.ca",
+creator_id: "3"
+)
 
-# Event.create!(
-# event_name: "Roller Disco",
-# description: "Can someone just take me out and dance disco with me already?",
-# event_datetime: "2015-01-15 14:48:00.000000",
-# location: "Mississauga, On",
-# url: "www.scootersrollerpalace.ca",
-# )
+Event.create!(
+event_name: "Roller Disco",
+description: "Can someone just take me out and dance disco with me already?",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Mississauga, On",
+url: "www.scootersrollerpalace.ca",
+creator_id: "1"
+)
 
-# Event.create!(
-# event_name: "Go to Las Vagas",
-# description: "What happens there.. well you know.",
-# event_datetime: "2015-01-15 14:48:00.000000",
-# location: "Las Vags, Navada",
-# url: "www.lasvagas.ca",
-# )
+Event.create!(
+event_name: "Go to Las Vagas",
+description: "What happens there.. well you know.",
+event_datetime: "2015-01-15 14:48:00.000000",
+location: "Las Vags, Navada",
+url: "www.lasvagas.ca",
+creator_id: "2"
+)
 
 # Make Friendships
 
