@@ -37,6 +37,11 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -67,6 +72,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
+    mini_magick (4.0.1)
     minitest (5.4.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
@@ -150,10 +156,12 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  carrierwave
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  mini_magick
   pry-rails
   quiet_assets
   rails (= 4.1.7)

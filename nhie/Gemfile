@@ -39,8 +39,11 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 gem 'sorcery'
 gem 'kaminari'
+gem 'mini_magick'
+gem 'carrierwave'
 gem 'pry-rails'
 gem 'quiet_assets'
 gem 'awesome_print'
 gem 'better_errors'
 gem 'binding_of_caller'
+

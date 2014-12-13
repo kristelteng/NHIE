@@ -20,6 +20,9 @@ class User < ActiveRecord::Base
   has_many :participations
   has_many :participated_events, through: :participations, source: :event
   
+  mount_uploader :image, UserImageUploader
+
+
   #has_many :events, :through => :friends, :class_name => 'Event', :source => :events
 
   # %w[accepted requested pending].each do |status|
