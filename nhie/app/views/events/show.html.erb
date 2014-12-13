@@ -1,9 +1,12 @@
 	<div>
     <h1><%= @event.event_name %></h1>
+
+		<p>Created By: <%= @event.creator.first_name %></p>
+
 		<p>Description: <%= @event.description %></p>
 		<p>Event Date: <%= @event.event_datetime %></p>
 		<p>Location: <%= @event.location %></p>
-		<p>Website: <%= @event.url %></p>
+		<%= link_to "website", "http://#{@event.url}" %>
     
 		<!-- Must hide after being clicked -->
 
