@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212212902) do
+ActiveRecord::Schema.define(version: 20141213223403) do
 
   create_table "events", force: true do |t|
     t.text     "description"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20141212212902) do
     t.integer  "user_id"
     t.integer  "friend_id"
     t.boolean  "accepted"
+  end
+
+  create_table "messages", force: true do |t|
+    t.text     "body"
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "participations", force: true do |t|

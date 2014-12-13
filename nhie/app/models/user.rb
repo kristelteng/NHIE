@@ -22,6 +22,9 @@ class User < ActiveRecord::Base
   
   mount_uploader :image, UserImageUploader
 
+  has_many :messages
+  has_many :events, through: :messages
+
 
   #has_many :events, :through => :friends, :class_name => 'Event', :source => :events
 
