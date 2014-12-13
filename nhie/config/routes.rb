@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'events#index'
 
   resources :users do |users|
@@ -11,7 +12,9 @@ Rails.application.routes.draw do
 
   resources :events do |events|
     post :join
+    resources :messages, only: [:show, :new, :create, :destroy]
   end
+  
   resources :user_sessions
   resources :participations
   

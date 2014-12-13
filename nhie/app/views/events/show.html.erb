@@ -1,25 +1,41 @@
-	<div>
-    <h1><%= @event.event_name %></h1>
+<div>
+  <h1><%= @event.event_name %></h1>
 
-		<p>Created By: <%= @event.creator.first_name %></p>
+	<p>Created By: <%= @event.creator.first_name %></p>
 
-		<p>Description: <%= @event.description %></p>
-		<p>Event Date: <%= @event.event_datetime %></p>
-		<p>Location: <%= @event.location %></p>
-		<%= link_to "website", "http://#{@event.url}" %>
-    
-		<!-- Must hide after being clicked -->
+	<p>Description: <%= @event.description %></p>
+	<p>Event Date: <%= @event.event_datetime %></p>
+	<p>Location: <%= @event.location %></p>
+	<%= link_to "website", "http://#{@event.url}" %>
+  
+	<!-- Must hide after being clicked -->
 
-		<% if !current_user.participated_events.include?(@event) %>
-    	<%= button_to "Join Event", event_join_path(@event), method: :post %>
-    <% else %>
-			<h3> You are attending this event!</h3>
-		<% end %>
+	<% if !current_user.participated_events.include?(@event) %>
+  	<%= button_to "Join Event", event_join_path(@event), method: :post %>
+  <% else %>
+		<h3> You are attending this event!</h3>
+	<% end %>
 
-    <!-- Only show for user who created the event -->
-    <% if @event.creator == current_user %> 
-    	<%= button_to "Delete Event", event_path(@event), method: :delete %>
-    <% end %>
-	</div>
+  <!-- Only show for user who created the event -->
+  <% if @event.creator == current_user %> 
+  	<%= button_to "Delete Event", event_path(@event), method: :delete %>
+  <% end %>
+
+<br>
+<br>
+
+<!-- ++++++++++Conversation Portion++++++++++ -->
+
+<div class="conversation">
+	<%= render :partial => 'conversation' %>
+</div>
+
+<div class="create-message">
+	<%= render :partial => 'create_message' %>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+</div>
 
 
