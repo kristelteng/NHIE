@@ -1,4 +1,7 @@
 class Event < ActiveRecord::Base
+  has_many :messages
+  has_many :users, through: :messages
+  
   validates :event_name, presence: true
   validates :description, presence: true
   validates :event_datetime, presence: true
@@ -9,6 +12,4 @@ class Event < ActiveRecord::Base
   has_many :participants, through: :participation, source: :user
 
 
-  has_many :messages
-  has_many :users, through: :messages
 end

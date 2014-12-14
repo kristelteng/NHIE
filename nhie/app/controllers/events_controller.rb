@@ -3,12 +3,17 @@ class EventsController < ApplicationController
 
   def index
     @events = if params[:search]
-      Events.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+      Event.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
     else
       Event.order("events.created_at DESC")
     end.page(params[:page])
 
     @friends_events = current_user.friends.map(&:created_events).flatten
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new

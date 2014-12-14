@@ -1,0 +1,7 @@
+<% if @message.errors.any? %>
+  $('#message-errors').html("<%= j(render partial: 'message_form_errors') %>")
+<% else %>
+  $('#event-list').html("<%= j(render @event.messages) %>");
+  $('#message_body').val('');
+  $('#message-errors').html('');
+<% end %>

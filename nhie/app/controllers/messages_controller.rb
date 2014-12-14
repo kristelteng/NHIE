@@ -7,12 +7,17 @@ class MessagesController < ApplicationController
 
   def create
   	@message = @event.messages.build(message_params)
-  	@message.user = current_user
+  	@message.user_id = current_user.id
+
+    respond_to do |format|
   		if @message.save
-  			redirect_to event_path(@event), notice: 'Woo! Your message was added'
-  		else
-  			render 'events/show'
+        format.html { redirect_to event_path(@event), notice: 'Woo! Your message was added' }
+  		  format.js 
+      else
+        format.html { render 'events/show', alert: 'There was a problem' }
+        format.js
   		end
+    end
   end
 
   def new
@@ -24,12 +29,11 @@ class MessagesController < ApplicationController
   end
 
 private
-	
-	def message_params
-		params.require(:message).permit(:body, :event_id, :user_id)
-	end
-
 	def load_event
 		@event = Event.find(params[:event_id])
 	end
+  
+  def message_params
+    params.require(:message).permit(:body, :event_id, :user_id)
+  end
 end

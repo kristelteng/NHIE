@@ -1,0 +1,12 @@
+<% if message.id.present? %>
+  <div class="message">
+    <p>
+        <%= message.body %>
+        <br>
+        <% if message.user != nil %>
+          <em> by <%= message.user.username %></em>
+          Added on: <%= message.created_at %>
+        <% end %>
+    </p>
+  </div>
+<% end %>
