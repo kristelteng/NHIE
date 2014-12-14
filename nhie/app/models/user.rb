@@ -25,9 +25,6 @@ class User < ActiveRecord::Base
   has_many :messages
   has_many :events, through: :messages
 
-
-  #has_many :events, :through => :friends, :class_name => 'Event', :source => :events
-
   # %w[accepted requested pending].each do |status|
   #   define_method("#{status}_friends") do
   #     friendships.where(status: status).map(&:friend)

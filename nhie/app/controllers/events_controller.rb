@@ -7,6 +7,8 @@ class EventsController < ApplicationController
     else
       Event.order("events.created_at DESC")
     end.page(params[:page])
+
+    @friends_events = current_user.friends.map(&:created_events).flatten
   end
 
   def new

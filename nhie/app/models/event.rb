@@ -8,6 +8,7 @@ class Event < ActiveRecord::Base
   has_many :participation
   has_many :participants, through: :participation, source: :user
 
+
   has_many :messages
   has_many :users, through: :messages
 end
