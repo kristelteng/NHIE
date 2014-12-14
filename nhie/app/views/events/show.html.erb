@@ -1,5 +1,5 @@
 <!-- Page is in a large if statement that will only show the event page if you are friends with that user. If you aren't friends with that user then it says 404 not found. -->
-<% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) %>
+<% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) || current_user.created_events.flatten.include?(@event) %>
 
   <h1><%= @event.event_name %></h1>
 

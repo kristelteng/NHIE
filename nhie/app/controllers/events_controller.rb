@@ -2,17 +2,19 @@ class EventsController < ApplicationController
   before_filter :ensure_logged_in
 
   def index
-    @friends_events = current_user.friends.map(&:created_events).flatten
     @events = if params[:search]
-      Event.where("LOWER(event_name) LIKE LOWER(?)", "%#{params[:search]}%")
-    else
-      Event.order("events.created_at DESC")
-    end.page(params[:page])
+    Event.where("LOWER(event_name) LIKE LOWER(?)", "%#{params[:search]}%")
+     else
+       Event.order("events.created_at DESC")
+     end.page(params[:page])
+    @friends_events = current_user.friends.map(&:created_events).flatten
+
     # respond_to do |format|
     #   format.html
     #   format.js
     # end
   end
+
 
   def new
     @event = Event.new
