@@ -8,17 +8,16 @@
 <p>Location: <%= @event.location %></p>
 <%= link_to "website", "http://#{@event.url}" %>
 
-<!-- Must hide after being clicked -->
+<!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
 
-<% if !current_user.participated_events.include?(@event) %>
-	<%= button_to "Join Event", event_join_path(@event), method: :post %>
-<% else %>
-	<h3> You are attending this event!</h3>
-<% end %>
-
-<!-- Only show for user who created the event -->
 <% if @event.creator == current_user %> 
-	<%= button_to "Delete Event", event_path(@event), method: :delete %>
+  <%= button_to "Delete Event", event_path(@event), method: :delete %>
+<% elsif %>
+  <% if !current_user.participated_events.include?(@event) %>
+  	<%= button_to "Join Event", event_join_path(@event), method: :post %>
+  <% elsif %>
+  	<h3> You are attending this event!</h3>
+  <% end %>
 <% end %>
 
 <br>
