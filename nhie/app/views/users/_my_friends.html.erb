@@ -4,5 +4,6 @@
 			<% current_user.friends.each do |user| %>
 					<li><%= link_to user.first_name, user_path(user) %></li>
 			<% end %>
+			<p>Number of Friends: <%= current_user.friends.count %> </p>
 		</ul>
 <% end %>
