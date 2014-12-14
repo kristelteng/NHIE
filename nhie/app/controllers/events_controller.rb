@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = if params[:search]
-      Event.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+      Event.where("LOWER(event_name) LIKE LOWER(?)", "%#{params[:search]}%")
     else
       Event.order("events.created_at DESC")
     end.page(params[:page])
