@@ -8,7 +8,6 @@ class EventsController < ApplicationController
       Event.order("events.created_at DESC")
     end.page(params[:page])
     @friends_events = current_user.friends.map(&:created_events).flatten
-
     # respond_to do |format|
     #   format.html
     #   format.js

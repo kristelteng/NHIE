@@ -1,48 +1,54 @@
+<!-- Page is in a large if statement that will only show the event page if you are friends with that user. If you aren't friends with that user then it says 404 not found. -->
+<% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) %>
 
-<h1><%= @event.event_name %></h1>
+  <h1><%= @event.event_name %></h1>
 
-<p>Created By: <%= @event.creator.first_name %></p>
+  <p>Created By: <%= @event.creator.first_name %></p>
 
-<p>Description: <%= @event.description %></p>
-<p>Event Date: <%= @event.event_datetime %></p>
-<p>Location: <%= @event.location %></p>
-<%= link_to "website", "http://#{@event.url}" %>
+  <p>Description: <%= @event.description %></p>
+  <p>Event Date: <%= @event.event_datetime %></p>
+  <p>Location: <%= @event.location %></p>
+  <%= link_to "website", "http://#{@event.url}" %>
 
-<!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
+  <!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
 
-<% if @event.creator == current_user %> 
-  <%= button_to "Delete Event", event_path(@event), method: :delete %>
-<% elsif %>
-  <% if !current_user.participated_events.include?(@event) %>
-  	<%= button_to "Join Event", event_join_path(@event), method: :post %>
+  <% if @event.creator == current_user %> 
+    <%= button_to "Delete Event", event_path(@event), method: :delete %>
   <% elsif %>
-  	<h3> You are attending this event!</h3>
-  <% end %>
-<% end %>
-
-<br>
-<br>
-
-<!-- ++++++++++Conversation Portion++++++++++ -->
-<% if current_user %>
-	<h2>Conversation</h2>
-		<div id="event-list">
-			<%= render @event.messages %>
-		</div>
-	<% end %>
-<br>
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<%= form_for([@event, @message], remote: true) do |f| %>
-  <div id="message-errors">
-    <% if @message.errors.any? %>
-      <%= render partial: 'message/message_form_errors' %>
+    <% if !current_user.participated_events.include?(@event) %>
+    	<%= button_to "Join Event", event_join_path(@event), method: :post %>
+    <% elsif %>
+    	<h3> You are attending this event!</h3>
     <% end %>
-  </div>
-  <div class="field">
-    <%= f.label :Add_a_message %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <% end %>
+
+  <br>
+  <br>
+
+  <!-- ++++++++++Conversation Portion++++++++++ -->
+  <% if current_user %>
+  	<h2>Conversation</h2>
+  		<div id="event-list">
+  			<%= render @event.messages %>
+  		</div>
+  	<% end %>
+  <br>
+  <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+  <%= form_for([@event, @message], remote: true) do |f| %>
+    <div id="message-errors">
+      <% if @message.errors.any? %>
+        <%= render partial: 'message/message_form_errors' %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :Add_a_message %><br />
+      <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% else %>
+  <h1>404, page not found</h1>
 <% end %>
