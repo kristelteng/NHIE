@@ -2,32 +2,19 @@
 
 <%= link_to "Create a new Event!", new_event_path %>
 
-<% if @events != nil %>
-
-	 <% @events.each do |event| %>
-	    <div>
-				<% if current_user.friends.map(&:created_events).flatten.include?(event) || current_user.created_events.flatten.include?(event)%> 
-	      <h3><%= link_to event.event_name, event_path(event) %></h3>
-	      <p><%= event.description %></p><br />
-	    </div>
-	  <% end %>
-	<% end %>
-
-<% else %>
 <!-- Below must be tested -->
-	<h3>My events</h3>
-		<% current_user.created_events.each do |event| %>
-			<div>
-				<h3><%= link_to event.event_name, event_path(event) %></h3>
-				<p><%= event.description %></p><br />
-			</div>
-	<% end %>
-
-	<h3>Friend events</h3>
-		<% @friends_events.each do |event| %>
-			<div>
-				<h3><%= link_to event.event_name, event_path(event) %></h3>
+<h3>My events</h3>
+	<% @created_events.each do |event| %>
+		<div>
+			<h3><%= link_to event.event_name, event_path(event) %></h3>
 			<p><%= event.description %></p><br />
-			</div>
-		<% end %>
+		</div>
 <% end %>
+
+<h3>Friend events</h3>
+	<% @friends_events.each do |event| %>
+		<div>
+			<h3><%= link_to event.event_name, event_path(event) %></h3>
+		<p><%= event.description %></p><br />
+		</div>
+	<% end %>
