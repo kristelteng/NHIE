@@ -92,6 +92,19 @@ a {
 .close-menu {
   display: none;
 }
+
+/*navbar search*/
+.navbar-form {
+	margin-top: -33px;
+}
+
+.form-control {
+	height: 20px;
+}
+.btn.btn-default.thin{
+	padding: 0px 12px;
+}
+
 #main-nav:target {
   width: 15%;
 }
