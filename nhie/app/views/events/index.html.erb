@@ -1,5 +1,5 @@
 <h1>Events</h1>
-
+<%= render :partial => 'events_search' %>
 <%= link_to "Create a new Event!", new_event_path %>
 
 <!-- Below must be tested -->
@@ -18,3 +18,4 @@
 		<p><%= event.description %></p><br />
 		</div>
 	<% end %>
+

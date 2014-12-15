@@ -1,2 +1,113 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html, body {
+  min-height: 100%;
+  background-color:#e9e9e9;
+}
+a {
+  text-decoration: none !important;
+}
+.blank-wrap{
+  background-color:#e9e9e9;
+  height:400px;
+  padding:20px;
+  color:#fff;
+  margin-bottom:20px;
+}
+.wrap{
+  background-color:#e9e9e9;
+  height:400px;
+  padding:20px;
+  color:#303030;
+  margin-bottom:20px;
+}
+.main-header {
+  background: #606060;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  left: 0;
+  z-index:1040;
+  transition: all 0.3s ease;
+}
+.main-header a {
+  position: absolute;
+  left: 35px;
+  top: -20%;
+  color: white;
+  font-size: 32px;
+}
+.page-wrap {
+  position: relative;
+  float: right;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #a3a3a3;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+}
+.main-nav a {
+  display: block;
+  border-bottom: 1px solid #a3a3a3;
+  color: white;
+  padding: 15px;
+  opacity:0;
+  transition: opacity 0.3s ease;
+}
+.flash_notice {
+	position: fixed;
+	margin-top: 5%;
+}
+.nav-bar-title {
+	font-size: 19px;
+	margin-top: 5px;
+}
+.toggle-menu{
+  padding:5px;
+}
+.main-nav a:hover, .main-nav a:focus {
+  background-color:#6f6f6f;
+}
+.main-nav:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 34px;
+}
+.content {
+  padding: 100px 20px 20px 20px;
+}
+.close-menu {
+  display: none;
+}
+#main-nav:target {
+  width: 15%;
+}
+#main-nav:target > a{
+	opacity:1;
+}
+#main-nav:target + .page-wrap {
+  width: 80%;
+}
+#main-nav:target + .page-wrap .open-menu {
+  display: none;
+}
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+#main-nav:target + .page-wrap .main-header {
+  width: 85%;
+  left: 15%;
+}

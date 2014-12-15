@@ -2,11 +2,11 @@
 <html>
 		<head>
 		  <title>Nhie</title>
-		  <!-- ++++++++++++++ -->
-		  <!-- ++++++++++++++ -->
 		  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		  <%= csrf_meta_tags %>
+		  <!-- ++++++++++++++ -->
+		  <!-- ++++++++++++++ -->
 		</head>
 	<body class="<%= controller_name %> <%= action_name %>">
 		<!-- checking for error messages -->
@@ -15,27 +15,45 @@
 		    <%= content_tag :div, msg, :class => "flash_#{name}" %>
 		  <% end %>
 		<% end %>
-
-	<!-- SEARCH -->
-      <div class="form-group">
-        <%= form_tag events_path, method: :get, authentication: false, id: 'search-form' do %>
-        	<%= text_field_tag :search, params[:params], :input_type =>'text', :class => 'form-control', :placeholder =>'search' %>
-        	<%= submit_tag "Search", :type => 'submit', :class => 'btn btn-default' %>
-        <% end %>
-      </div> 
-      
-	<!-- SEARCH -->
-<!-- ++++++++++++++ -->
-<!-- ++++++++++++++ -->
-		<%= yield %>
-		
-		<% if logged_in? %>
-			<p><%= link_to("Log out", logout_path) unless current_page?(login_path) %></p>
-			<p><%= link_to("Profile", user_url(current_user)) %></p>
-			<p><%= link_to("Users", users_url) %></p>
-			<p><%= link_to("Events", events_url) %></p>
-
-		<% end %>
-
+	<nav class="main-nav" id="main-nav">
+	  <!-- <a href="#">Events</a> -->
+	  <!-- <a href="#">Profile</a> -->
+	  <!-- <a href="#">Friends</a> -->
+				<% if logged_in? %>
+					<%= link_to("Log out", logout_path) unless current_page?(login_path) %>
+					<%= link_to("Profile", user_url(current_user)) %>
+					<%= link_to("Users", users_url) %>
+					<%= link_to("Events", events_url) %>
+				<% end %>
+	</nav>
+		<div class="page-wrap">
+		  <% if logged_in? %>
+			  <header class="main-header">
+			    <a href="#main-nav" class="open-menu toggle-menu">
+			      &#8801;
+			    </a>
+			    <a href="#" class="close-menu toggle-menu">
+			      &#8801;
+			    </a>
+			    <h1 class="nav-bar-title">SIDE NAV WEBSITE</h1>
+			  </header>
+			<% end %>
+		  <div class="content">
+		      <div class="col-sm-3">
+		        <div class="blank-wrap">
+		        </div>
+		      </div>
+		      <div class="col-sm-6">
+		        <div class="wrap">
+		          <%= yield %>
+		        </div>
+		      </div>
+		      <div class="col-sm-3">
+		        <aside class="blank-wrap">
+		        </aside>
+		      </div>
+		  </div> 
+		</div>
 	</body>
 </html>
+
