@@ -3,9 +3,30 @@
 @import "messages";
 @import "events";
 
+
+/*FONTS*/
+@font-face {
+  font-family: Lato-Bold;
+  src: url('Lato-Bold.ttf');
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url('Lato-Regular.ttf');
+}
+@font-face {
+  font-family: Lato-Light;
+  src: url('Lato-Light.ttf');
+}
+@font-face {
+  font-family: Lato-thin;
+  src: url('Lato-thin.ttf');
+}
+/*FONTS*/
+
+
 html, body {
   min-height: 100%;
-  background-color:#e9e9e9;
+  /*background-color:#e9e9e9;*/
 }
 a {
   text-decoration: none !important;
@@ -279,12 +300,28 @@ a {
 }
 
 /*FLIPPING CONTAINER*/
-.flip-container { -webkit-perspective:1000; width: 600px;}
-.flipper { transition: 0.5s; -webkit-transform-style: preserve-3d; position: relative; height: 200px; }
-.front, .back { width: 600px; height: 200px; position: absolute; left: 0; top: 0; -webkit-backface-visibility: hidden; color: #fff; font-size: 2em; line-height: 200px; text-align: center; }
-.back { -webkit-transform: rotateY(180deg); background: #6f6f6f; border-radius: 5px;}
-.front { z-index: 2; background: white; color: #6F6F6F; border-radius: 5px;}
+.flip-container { -webkit-perspective:1000; width: 600px; margin: auto;}
+.flipper { transition: 0.5s; -webkit-transform-style: preserve-3d; position: relative; height: 100px; }
+.front, .back { width: 600px; height: 100px; position: absolute; left: 0; top: 0; -webkit-backface-visibility: hidden; color: #fff; font-size: 2em; line-height: 200px; text-align: center; }
+.back { -webkit-transform: rotateY(180deg); background: #888888;}
+.front { z-index: 2;  color: #666666; border: 3px #888888 solid;}
 
 .vertical-flip-container .back { -webkit-transform: rotateX(180deg); }
 .vertical-flip-container:hover .flipper, .vertical-flip-container.hover .flipper { -webkit-transform: rotateX(-180deg); }
 /*FLIPPING CONTAINER*/
+
+a.event-list-titles-dark {
+  font-family: Lato-Bold;
+  color: #3c3c3c;
+  font-size: 1.3em;
+}
+
+a.event-list-titles-light {
+  font-family: Lato-Bold;
+  color: white;
+  font-size: 0.9em;
+}
+
+hr.event-index-card-lines {
+  width: 75px;
+}

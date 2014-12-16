@@ -12,11 +12,12 @@
 		  <div class="flipper">
 		    <div class="front">
 		      <!-- The front face -->
-					<h3><%= link_to event.event_name, event_path(event) %></h3>
+					<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
 		    </div>
 		    <div class="back">
 		       <!-- The back face -->
-		      <h3><%= link_to event.event_name, event_path(event) %></h3>
+		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
+		      <hr class="event-index-card-lines">
 					<p><%= event.description %></p><br />
 		    </div>
 		  	<div class="clear"></div>
@@ -34,11 +35,12 @@
 		  <div class="flipper">
 		    <div class="front">
 		      <!-- The front face -->
-					<h3><%= link_to event.event_name, event_path(event) %></h3>
+					<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
 		    </div>
 		    <div class="back">
 		       <!-- The back face -->
-		      <h3><%= link_to event.event_name, event_path(event) %></h3>
+		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
+		      <hr class="event-index-card-lines">
 					<p><%= event.description %></p><br />
 		    </div>
 		  	<div class="clear"></div>
