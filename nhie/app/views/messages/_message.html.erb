@@ -1,12 +1,15 @@
 <% if message.id.present? %>
-  <div class="message">
-    <p>
-        <%= message.body %>
-        <br>
-        <% if message.user != nil %>
-          <em> by <%= message.user.username %></em>
-          Added on: <%= message.created_at %>
-        <% end %>
-    </p>
+  <%= image_tag(message.user.image, size: "50x50") %>
+  <div class="message-box">
+
+    <div class="message-title">
+      <% if message.user != nil %>
+      <%= message.created_at.strftime("%d %b. %Y %H:%M") %>
+      <em><%= message.user.username %> says:</em>
+      
+    </div>
+    <p><%= message.body %></p>
+    <% end %>
+    
   </div>
 <% end %>
