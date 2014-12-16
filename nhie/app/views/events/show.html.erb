@@ -2,19 +2,6 @@
 <%= render :partial => 'events_search' %>
 
 <% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) || current_user.created_events.flatten.include?(@event) %>
-  
-<!--   <div class="event-card">
-    <div class="event-header">
-      <h1 class="title"><%= @event.event_name %></h1>
-      by: <%= @event.creator.first_name %>
-    </div>
-    <div class="event-info">
-      <p>Description: <%= @event.description %></p><hr>
-      <p>Event Date: <%= @event.event_datetime.strftime("%d %b. %Y %H:%M") %></p><hr>
-      <p>Location: <%= @event.location %></p><hr>
-      <%= link_to "website", "http://#{@event.url}" %>
-    </div>
-  </div> -->
 
   <div class="panel panel-default">
     <div class="panel-heading event-header">
