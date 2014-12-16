@@ -2,3 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.event-header > h3 {
+  color: #6B6E80;
+  font-size: 50px;
+  text-transform: capitalize;
+  font-family: Helvetica Neue;
+  font-weight: 200;
+}
+
+.panel-heading.event-header {
+  background-color: #FFF;
+  color: #6B6E80;
+  text-align: center;
+}
+
+.byline {
+  color: #5BC0DE;
+}

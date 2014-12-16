@@ -1,18 +1,32 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/ 
-
-
+.message {
+  margin-bottom: 10px;
+}
+.message-avatar {
+  width: 20%;
+  float: left;
+  border: 1px solid transparent; // to have the same position as the message box
+}
 .message-box {
+  width: 80%;
+  float: left;
+  position: relative;
+  color: #6B6E80;
+  background: none repeat scroll 0% 0% #FFF;
   padding: 10px 20px;
+  border: 1px solid #EEE;
   border-radius: 4px;
+
   background: none repeat scroll 0% 0% #FFF;
   position: relative;
   color: #AAA;
   padding-bottom: 8px;
   margin-bottom: 10px;
   margin-left: 85px;
-  box-shadow: 1px 1px 1px #b4b4b4
+  box-shadow: 1px 1px 1px #b4b4b4;
+  margin: -65px 0px 20px 75px;
 }
 
 .message-title {
@@ -21,10 +35,24 @@
 }
 
 p {
-  font-size: 13px;
+  font-size: 15px;
   word-wrap: break-word;
 }
 
 em {
   color: #5BC0DE;
+}
+
+#message_body {
+  border: 1px solid #CCC;
+  padding: 6px 10px;
+  width: 100%;
+  color: #555;
+  word-wrap: break-word;
+}
+
+.message_label {
+  font-size: 13px;
+  color: #6B6E80;
+  font-weight: normal;
 }
