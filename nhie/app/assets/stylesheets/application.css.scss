@@ -252,3 +252,13 @@ a {
   margin-bottom: 0px;
 }
 
+/*FLIPPING CONTAINER*/
+.flip-container { -webkit-perspective:1000; width: 600px;}
+.flipper { transition: 0.5s; -webkit-transform-style: preserve-3d; position: relative; height: 200px; }
+.front, .back { width: 600px; height: 200px; position: absolute; left: 0; top: 0; -webkit-backface-visibility: hidden; color: #fff; font-size: 2em; line-height: 200px; text-align: center; }
+.back { -webkit-transform: rotateY(180deg); background: #6f6f6f; border-radius: 5px;}
+.front { z-index: 2; background: white; color: #6F6F6F; border-radius: 5px;}
+
+.vertical-flip-container .back { -webkit-transform: rotateX(180deg); }
+.vertical-flip-container:hover .flipper, .vertical-flip-container.hover .flipper { -webkit-transform: rotateX(-180deg); }
+/*FLIPPING CONTAINER*/
