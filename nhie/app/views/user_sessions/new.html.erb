@@ -2,7 +2,6 @@
 
 <div id="silo">
   <img class="bottom" src="http://s13.postimg.org/z8uehyn7r/nhie_logo_2.png" />
-  <!-- <img class="top" src="http://s12.postimg.org/dhkq8122l/smallcar2.jpg" /> -->
 </div>
 
 
@@ -24,7 +23,7 @@
 
     <div class="field">
       <%= check_box_tag :remember_me %>
-      <%= label_tag :remember_me %>
+      <%= label_tag :remember_me, params[:remember_me],  class: "checkbox" %>
     </div><br>
 
     <div class="actions">

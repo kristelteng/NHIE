@@ -22,7 +22,7 @@
 				<% if logged_in? %>
 					<%= link_to("Log out", logout_path) unless current_page?(login_path) %>
 					<%= link_to("Profile", user_url(current_user)) %>
-					<%= link_to("Users", users_url) %>
+					<%= link_to("Friends", users_url) %>
 					<%= link_to("Events", events_url) %>
 				<% end %>
 	</nav>

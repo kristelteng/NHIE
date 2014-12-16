@@ -30,7 +30,7 @@ a {
   color: white;
   position: fixed;
   width: 100%;
-  height: 7%;
+  height: 5%;
   left: 0;
   z-index:1040;
   transition: all 0.3s ease;
@@ -139,6 +139,17 @@ a {
   background-image: url('http://s3.postimg.org/6q3ff7e4z/05132014_Beach_Party_original_copy.jpg');
   background-repeat:repeat;
 }
+.fullscreen_bg_cups {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('http://s28.postimg.org/bnn89b8m5/tumblr_m79x80z9_M51r3pbe7o1_1280_blured_1.jpg');
+  background-repeat:repeat;
+}
 
 .login-container {
   height: 100px;
@@ -156,20 +167,17 @@ div#silo {
   margin-right: auto;
 margin-left: auto;
 } 
-/*MY CODE*/
-         /* .signin-logo1{
-            height: 100px;
-            width: 100px;
-            background-color: blue;
-            /*background-image: url('http://s28.postimg.org/nfrmxl10d/smallcar.jpg');*/
-          /*}*/
-          /*.signin-logo1:hover {
-            height: 100px;
-            width: 100px;
-            background-color: red;
-          }*/
-/*MY CODE*/
 
+.signup-logo-left{
+  width: 400px;
+  height: 400px;
+  float: left;
+  margin-right: auto;
+  margin-left: 12%;
+  margin-top: 5%;
+} 
+
+/*SIGNIN FORM*/
 .form-signin {
   max-width: 280px;
   padding: 15px;
@@ -177,6 +185,14 @@ margin-left: auto;
   margin-top: 1%;
 }
 
+.form-signup {
+  max-width: 280px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 1%;
+  float: right;
+  margin-right: 17%;
+}
 label {
   color: white;
 }
@@ -189,14 +205,30 @@ label {
 }
 
 /*USERNAME INPUT*/
-input#username, input#password {
+input#username, 
+input#password, 
+input#user_first_name, 
+input#user_last_name, 
+input#user_username,
+input#user_email,
+input#user_password,
+input#user_password_confirmation {
   background: none;
   color: white;
   outline:none;
 }
 
+input#user_image {
+  color: white;
+}
+
 input#username:focus, input#password:focus {
   outline:none;
+}
+
+/*SIGN IN CHECKBOX */
+label.checkbox {
+  display: inline;
 }
 
 /*SIGN IN BUTTON*/
@@ -214,3 +246,9 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
 a {
   color: #C83728;
 }
+
+.over-form-right-line {
+  width: 400px;
+  margin-bottom: 0px;
+}
+

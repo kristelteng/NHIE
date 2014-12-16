@@ -1,49 +1,61 @@
-<!-- added errors messages -->
-<% if !@user.errors.messages.blank? %> 
-  <% @user.errors.full_messages.each do |message| %>
-    <div class="alert">
-      <%= message %><br/>
+<div id="fullscreen_bg_cups" class="fullscreen_bg_cups"/>
+
+<!-- <div id="silo">
+  <img class="bottom" src="http://s13.postimg.org/z8uehyn7r/nhie_logo_2.png" />
+</div> -->
+  <div id="silo">
+    <img class="signup-logo-left" src="http://s13.postimg.org/z8uehyn7r/nhie_logo_2.png" />
+  </div>
+
+  <div class="form-signup">
+  <% if !@user.errors.messages.blank? %> 
+    <% @user.errors.full_messages.each do |message| %>
+      <div class="alert">
+        <%= message %><br/>
+      </div>
+    <% end %>
+  <% end %><br/>
+
+  <%= form_for @user do |f| %>
+    <div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :username %><br />
+      <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm Password' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div><br />
+
+    <div class="field">
+      <%= f.submit "Submit", class: 'btn btn-lg btn-primary btn-block' %>
     </div>
   <% end %>
-<% end %><br/>
 
-<%= form_for @user do |f| %>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
   </div>
-  
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm Password' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: 'btn btn-default btn-file' %>
-  </div>
-
-  <div class="field">
-    <%= f.submit "Submit", class: 'btn btn-lg btn-primary btn-block' %>
-  </div>
-<% end %>
+</div>
