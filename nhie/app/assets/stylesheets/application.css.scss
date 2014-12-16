@@ -21,6 +21,10 @@
   font-family: Lato-thin;
   src: url('Lato-thin.ttf');
 }
+@font-face {
+  font-family: Cardoi99;
+  src: url('Cardoi99.otf');
+}
 /*FONTS*/
 
 
@@ -119,8 +123,35 @@ a {
 
 /*navbar search*/
 .navbar-form {
-	margin-top: -33px;
+	margin-top: -2.3%;
 }
+#search-form {
+  /*background-color: white;*/
+}
+#search {
+  /*border: 2px white solid;*/
+  border-radius: 0px;
+  font-family: Lato-Bold;
+  font-size: 1em; 
+  height: 30px;
+  padding-right: 0px;
+}
+input.btn.btn-default.thin.form-control{
+    border-radius: 0px;
+    height: 30px;
+    border: 2px white solid;
+    background: none;
+    color: #888888;
+}
+input.btn.btn-default.thin.form-control:hover{
+  transition: 0.3s ease;
+    border-radius: 0px;
+    height: 30px;
+    border: 2px #ff3427 solid;
+    background-color: #ff3427;
+    color: white;
+}
+/*navbar search*/
 
 .form-control {
 	height: 20px;
@@ -301,8 +332,8 @@ a {
 
 /*FLIPPING CONTAINER*/
 .flip-container { -webkit-perspective:1000; width: 600px; margin: auto;}
-.flipper { transition: 0.5s; -webkit-transform-style: preserve-3d; position: relative; height: 100px; }
-.front, .back { width: 600px; height: 100px; position: absolute; left: 0; top: 0; -webkit-backface-visibility: hidden; color: #fff; font-size: 2em; line-height: 200px; text-align: center; }
+.flipper { transition: 0.5s; -webkit-transform-style: preserve-3d; position: relative; height: 200px; }
+.front, .back { width: 600px; height: 200px; position: absolute; left: 0; top: 0; -webkit-backface-visibility: hidden; color: #fff; font-size: 2em; line-height: 200px; text-align: center; }
 .back { -webkit-transform: rotateY(180deg); background: #888888;}
 .front { z-index: 2;  color: #666666; border: 3px #888888 solid;}
 
@@ -311,9 +342,12 @@ a {
 /*FLIPPING CONTAINER*/
 
 a.event-list-titles-dark {
-  font-family: Lato-Bold;
+  font-family: Lato-light;
   color: #3c3c3c;
   font-size: 1.3em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 10%
 }
 
 a.event-list-titles-light {
@@ -325,3 +359,39 @@ a.event-list-titles-light {
 hr.event-index-card-lines {
   width: 75px;
 }
+
+p.event-description {
+  margin-top: -100px;
+  font-family: Lato-light;
+  text-align: center;
+}
+
+/*SIDEBAR*/
+.sidebar-photo {
+  height: 200px;
+  width: 200px;
+  margin-left: 8%;
+  margin-top: 8%;
+  border-radius: 50%; 
+  background-color: white;
+}
+.sidebar-photo > img {
+  border-radius: 50%; 
+  border: 4px white solid;
+}
+.sidebar-links> a {
+  text-align: center;
+  color: white;
+  opacity: 100;
+  margin-top: 10%;
+  font-family: Lato-Regular;
+  border-bottom: 1px #888888 solid;
+}
+.sidebar-name {
+  color: white;
+  font-family: Lato-Bold;
+  font-size: 1.2em;
+  text-align: center;
+
+}
+/*SIDEBAR*/

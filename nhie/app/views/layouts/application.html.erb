@@ -20,10 +20,17 @@
 	  <!-- <a href="#">Profile</a> -->
 	  <!-- <a href="#">Friends</a> -->
 				<% if logged_in? %>
-					<%= link_to("Log out", logout_path) unless current_page?(login_path) %>
-					<%= link_to("Profile", user_url(current_user)) %>
-					<%= link_to("Friends", users_url) %>
-					<%= link_to("Events", events_url) %>
+					<div class="sidebar-photo">
+						<%= image_tag(@current_user.image, size: "200x200") %>
+					</div>
+					<h1 class="sidebar-name">Howdy, <%=@current_user.first_name %>!</h1>
+					<hr>
+					<div class="sidebar-links">
+						<%= link_to("Log out", logout_path) unless current_page?(login_path) %>
+						<%= link_to("Profile", user_url(current_user)) %>
+						<%= link_to("Friends", users_url)%>
+						<%= link_to("Events", events_url)%>
+					</div>
 				<% end %>
 	</nav>
 		<div class="page-wrap">
