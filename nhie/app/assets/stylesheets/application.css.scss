@@ -143,7 +143,6 @@ a {
   height: 100px;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 div#silo {
@@ -151,8 +150,8 @@ div#silo {
     margin-top: 5%;
 }
 .bottom{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   margin-right: auto;
 margin-left: auto;
 } 
@@ -181,7 +180,6 @@ label {
   color: white;
 }
 
-
 .form-control {
   position: relative;
   font-size: 16px;
@@ -193,6 +191,11 @@ label {
 input#username, input#password {
   background: none;
   color: white;
+  outline:none;
+}
+
+input#username:focus, input#password:focus {
+  outline:none;
 }
 
 /*SIGN IN BUTTON*/
@@ -207,3 +210,6 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
   border: 0px white solid;
 }
 
+a {
+  color: #C83728;
+}
