@@ -2,34 +2,49 @@
 <%= render :partial => 'events_search' %>
 
 <% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) || current_user.created_events.flatten.include?(@event) %>
+  
+<!--   <div class="event-card">
+    <div class="event-header">
+      <h1 class="title"><%= @event.event_name %></h1>
+      by: <%= @event.creator.first_name %>
+    </div>
+    <div class="event-info">
+      <p>Description: <%= @event.description %></p><hr>
+      <p>Event Date: <%= @event.event_datetime.strftime("%d %b. %Y %H:%M") %></p><hr>
+      <p>Location: <%= @event.location %></p><hr>
+      <%= link_to "website", "http://#{@event.url}" %>
+    </div>
+  </div> -->
 
-  <h1><%= @event.event_name %></h1>
-
-  <p>Created By: <%= @event.creator.first_name %></p>
-
-  <p>Description: <%= @event.description %></p>
-  <p>Event Date: <%= @event.event_datetime %></p>
-  <p>Location: <%= @event.location %></p>
-  <%= link_to "website", "http://#{@event.url}" %>
-
+  <div class="panel panel-default">
+    <div class="panel-heading event-header">
+      <h3 class="panel-title"><%= @event.event_name %></h3>
+      <span class="byline">by: <%= @event.creator.first_name %></span>
+    </div>
+    <div class="panel-body event-info">
+      <p>Description: <%= @event.description %></p><hr>
+      <p>Event Date: <%= @event.event_datetime.strftime("%d %b. %Y %H:%M") %></p><hr>
+      <p>Location: <%= @event.location %></p><hr>
+      <%= link_to "website", "http://#{@event.url}" %>
+    </div>
+</div>
+  
   <!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
 
   <% if @event.creator == current_user %> 
-    <%= button_to "Delete Event", event_path(@event), method: :delete %>
+    <%= button_to "Delete Event", event_path(@event), {method: :delete, class: 'btn btn-default'} %>
   <% elsif %>
     <% if !current_user.participated_events.include?(@event) %>
-    	<%= button_to "Join Event", event_join_path(@event), method: :post %>
+    	<%= button_to "Join Event", event_join_path(@event), method: :post  %>
     <% elsif %>
     	<h3> You are attending this event!</h3>
     <% end %>
   <% end %>
 
-  <br>
-  <br>
 
   <!-- ++++++++++Conversation Portion++++++++++ -->
   <% if current_user %>
-  	<h2>Conversation</h2>
+  	<h2 class="title">Conversation</h2>
   		<div id="event-list">
   			<%= render @event.messages %>
   		</div>
@@ -43,12 +58,13 @@
       <% end %>
     </div>
 
-   <div class="field">
-      <%= f.label :Add_a_message %><br />
+    <div class="field">
+      <%= f.label :Add_a_message, class: "message_label" %><br />
       <%= f.text_area :body %>
     </div>
+    
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit class: 'btn btn-default'%>
     </div>
   <% end %>
  
