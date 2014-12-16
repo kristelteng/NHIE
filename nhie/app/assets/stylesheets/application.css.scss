@@ -9,14 +9,14 @@ a {
   text-decoration: none !important;
 }
 .blank-wrap{
-  background-color:#e9e9e9;
+  /*background-color:#e9e9e9;*/
   height:400px;
   padding:20px;
   color:#fff;
   margin-bottom:20px;
 }
 .wrap{
-  background-color:#e9e9e9;
+  /*background-color:#e9e9e9;*/
   height:400px;
   padding:20px;
   color:#303030;
@@ -104,6 +104,9 @@ a {
 .btn.btn-default.thin{
 	padding: 0px 12px;
 }
+.login-container {
+  text-align: center;
+}
 
 #main-nav:target {
   width: 15%;
@@ -124,3 +127,83 @@ a {
   width: 85%;
   left: 15%;
 }
+.fullscreen_bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('http://s3.postimg.org/6q3ff7e4z/05132014_Beach_Party_original_copy.jpg');
+  background-repeat:repeat;
+}
+
+.login-container {
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+div#silo {
+    text-align: center;
+    margin-top: 5%;
+}
+.bottom{
+  width: 200px;
+  height: 200px;
+  margin-right: auto;
+margin-left: auto;
+} 
+/*MY CODE*/
+         /* .signin-logo1{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            /*background-image: url('http://s28.postimg.org/nfrmxl10d/smallcar.jpg');*/
+          /*}*/
+          /*.signin-logo1:hover {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+          }*/
+/*MY CODE*/
+
+.form-signin {
+  max-width: 280px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+label {
+  color: white;
+}
+
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10;
+}
+
+/*USERNAME INPUT*/
+input#username, input#password {
+  background: none;
+  color: white;
+}
+
+/*SIGN IN BUTTON*/
+input.btn.btn-lg.btn-primary.btn-block {
+  border-radius: 23px;
+  border-color: white;
+  background: none;
+}
+input.btn.btn-lg.btn-primary.btn-block:hover{
+  transition: background-color 0.5s ease;
+  background-color: #C83728;
+  border: 0px white solid;
+}
+
