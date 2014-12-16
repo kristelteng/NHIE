@@ -1,11 +1,11 @@
 <% if message.id.present? %>
+<%= image_tag(message.user.image, size: "50x50") %>
 <div class="message-box">
 
   <div class="message-title">
     <% if message.user != nil %>
     Added on: <%= message.created_at %>
     <em><%= message.user.username %> says:</em>
-    
     
   </div>
   <p><%= message.body %></p>
