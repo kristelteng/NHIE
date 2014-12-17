@@ -1,25 +1,44 @@
 <!-- Page is in a large if statement that will only show the event page if you are friends with that user. If you aren't friends with that user then it says 404 not found. -->
 <% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) || current_user.created_events.flatten.include?(@event) %>
 
-<!-- <div class="panel panel-default"> -->
 <div class="event-header">
   <h3 class="event-title"><%= @event.event_name %></h3>
-  <span class="byline">by <%= @event.creator.first_name %></span>
-</div>
-<div class="event-info">
-  <p><!-- Description: --> <%= @event.description %></p>
-  <p><!-- Event Date: --> <%= @event.event_datetime.strftime("%d %b. %Y %H:%M") %></p>
-  <p><!-- Location: --> <%= @event.location %></p>
-  <%= link_to "website", "http://#{@event.url}" %>
+  <div class="byline">by <%= @event.creator.first_name %></div>
 </div>
 
+<div class="event-section">
+  <div class="event-label">description</div>
+  <div class="event-info">
+    <p><%= @event.description %></p>
+  </div>
+</div>
+
+<div class="event-section">
+  <div class="event-label">time</div>
+  <div class="event-info">
+    <p><%= @event.event_datetime.strftime("%d %b. %Y %H:%M") %></p>
+  </div>
+</div>
+
+<div class="event-section">
+  <div class="event-label">location</div>
+  <div class="event-info">
+    <p><%= @event.location %></p>
+  </div>
+</div>
+
+<div class="event-section">
+  <div class="event-info">
+    <%= link_to "website", "http://#{@event.url}" %>
+  </div>
+</div>
+    
 <!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
-
 <% if @event.creator == current_user %> 
-<%= button_to "Delete Event", event_path(@event), {method: :delete, class: 'btn btn-default'} %>
+<%= button_to "Delete Event", event_path(@event), {method: :delete, class: 'btn btn-default thin form-control event-button event-action'} %>
 <% elsif %>
 <% if !current_user.participated_events.include?(@event) %>
-<%= button_to "Join Event", event_join_path(@event), method: :post  %>
+<%= button_to "Join Event", event_join_path(@event), method: :post, class: 'btn btn-default thin form-control event-button event-action'  %>
 <% elsif %>
 <h3> You are attending this event!</h3>
 <% end %>
@@ -44,16 +63,14 @@
 </div>
 
 <div class="field">
-  <%= f.label :Add_a_message, class: "message_label" %><br />
   <%= f.text_area :body %>
 </div>
 
 <div class="actions">
-  <%= f.submit class: 'btn btn-default'%>
+  <%= f.submit class: 'btn btn-default thin form-control event-button'%>
 </div>
 <% end %>
 
 <% else %>
 <h1>404, page not found</h1>
-<% end %> 
-
+<% end %>

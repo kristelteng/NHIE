@@ -15,18 +15,10 @@
   position: relative;
   color: #6B6E80;
   background: none repeat scroll 0% 0% #FFF;
-  padding: 10px 20px;
+  padding: 10px 20px 10px;
   border: 1px solid #EEE;
   border-radius: 4px;
-
-  background: none repeat scroll 0% 0% #FFF;
-  position: relative;
-  color: #AAA;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
-  margin-left: 85px;
-  box-shadow: 1px 1px 1px #b4b4b4;
-  margin: -65px 0px 20px 75px;
+  margin: -65px 0px 20px 80px;
 }
 
 .message-title {
@@ -34,13 +26,13 @@
   font-size: 13px;
 }
 
+.message-timestamp {
+  float: right;
+}
+
 p {
   font-size: 15px;
   word-wrap: break-word;
-}
-
-em {
-  color: #5BC0DE;
 }
 
 #message_body {
@@ -49,10 +41,4 @@ em {
   width: 100%;
   color: #555;
   word-wrap: break-word;
-}
-
-.message_label {
-  font-size: 13px;
-  color: #6B6E80;
-  font-weight: normal;
 }
