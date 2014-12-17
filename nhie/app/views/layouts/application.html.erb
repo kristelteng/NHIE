@@ -21,9 +21,9 @@
 	  <!-- <a href="#">Friends</a> -->
 				<% if logged_in? %>
 					<div class="sidebar-photo">
-						<%= image_tag(@current_user.image, size: "200x200") %>
+						<%= image_tag(current_user.image, size: "200x200") %>
 					</div>
-					<h1 class="sidebar-name">Howdy, <%=@current_user.first_name %>!</h1>
+					<h1 class="sidebar-name">Howdy, <%=current_user.username %>!</h1>
 					<hr>
 					<div class="sidebar-links">
 						<%= link_to("Log out", logout_path) unless current_page?(login_path) %>

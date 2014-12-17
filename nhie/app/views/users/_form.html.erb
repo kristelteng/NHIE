@@ -1,11 +1,6 @@
 <div id="fullscreen_bg_cups" class="fullscreen_bg_cups"/>
 
-<!-- <div id="silo">
-  <img class="bottom" src="http://s13.postimg.org/z8uehyn7r/nhie_logo_2.png" />
-</div> -->
-  <div id="silo">
-    <img class="signup-logo-left" src="http://s13.postimg.org/z8uehyn7r/nhie_logo_2.png" />
-  </div>
+  <div id="signup-logos"></div>
 
   <div class="form-signup">
   <% if !@user.errors.messages.blank? %> 
@@ -54,8 +49,8 @@
 
     <div class="field">
       <%= f.submit "Submit", class: 'btn btn-lg btn-primary btn-block' %>
-    </div>
+    </div><br>
   <% end %>
-
+  <%= link_to "Login", login_path %>
   </div>
 </div>

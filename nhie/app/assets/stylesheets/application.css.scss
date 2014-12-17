@@ -201,7 +201,8 @@ input.btn.btn-default.thin.form-control:hover{
   left: 0;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url('http://s28.postimg.org/bnn89b8m5/tumblr_m79x80z9_M51r3pbe7o1_1280_blured_1.jpg');
+  /*background-image: url('http://s28.postimg.org/bnn89b8m5/tumblr_m79x80z9_M51r3pbe7o1_1280_blured_1.jpg');*/
+  background-image: image-url("blurred_cups.jpg");
   background-repeat:repeat;
 }
 
@@ -217,7 +218,7 @@ input.btn.btn-default.thin.form-control:hover{
     text-align: center;
     margin-top: 5%;
 }*/
-
+/*SIGNIN LOGOS*/
 div#silo {
   background-image: image-url("nhie_logo_2.png");
   background-position: 50% 50%;
@@ -234,7 +235,28 @@ div#silo:hover {
   background-position: 50% 50%;
 
 }
+/*SIGNIN LOGOS*/
 
+/*SIGNUP LOGOS*/
+div#signup-logos {
+  background-image: image-url("nhie_logo_2.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  height: 400px;
+  width: 400px;
+  float: left;
+  margin-left: 15%;
+  margin-top: 10%;
+  -webkit-transition:width .5s, height .5s, -webkit-transform .5s;
+  transition:width .5s, height .5s, transform .5s;
+}
+div#signup-logos:hover {
+  background-image: image-url("nhie_logo_4.png");
+  background-position: 50% 50%;
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg);
+}
+/*SIGNUP LOGOS*/
 
 
 
@@ -260,16 +282,19 @@ margin-left: auto;
   max-width: 280px;
   padding: 15px;
   margin: 0 auto;
-  margin-top: 1%;
+  margin-top: 15%;
+  float: right;
+  margin-right: 20%;
+  text-align: left;
 }
 
 .form-signup {
   max-width: 280px;
   padding: 15px;
   margin: 0 auto;
-  margin-top: 1%;
+  margin-top: 7%;
   float: right;
-  margin-right: 17%;
+  margin-right: 20%;
 }
 label {
   color: white;
@@ -282,6 +307,9 @@ label {
   padding: 10;
 }
 
+.form-control::-webkit-input-placeholder, textarea.box::-webkit-input-placeholder {
+  color: #cccccc;
+}
 /*USERNAME INPUT*/
 input#username, 
 input#password, 
@@ -294,6 +322,7 @@ input#user_password_confirmation {
   background: none;
   color: white;
   outline:none;
+  border-radius: 0px; 
 }
 
 input#user_image {
@@ -311,18 +340,20 @@ label.checkbox {
 
 /*SIGN IN BUTTON*/
 input.btn.btn-lg.btn-primary.btn-block {
-  border-radius: 23px;
+  border-radius: 0px;
   border-color: white;
+  border: 2px white solid;
+
   background: none;
 }
 input.btn.btn-lg.btn-primary.btn-block:hover{
   transition: background-color 0.5s ease;
-  background-color: #C83728;
-  border: 0px white solid;
+  background-color: #ff3427;
+  border: 2px #ff3427 solid;
 }
 
 a {
-  color: #C83728;
+  color: #ff3427;
 }
 
 .over-form-right-line {
@@ -395,3 +426,28 @@ p.event-description {
 
 }
 /*SIDEBAR*/
+
+/*CREATE EVENT FORM*/
+input.btn.btn-lg.btn-primary.btn-block.on-white {
+  border-radius: 0px;
+  border: 2px #888888 solid;
+  color: #888888;
+  font-family: Lato-Regular;
+
+  background: none;
+}
+input.btn.btn-lg.btn-primary.btn-block.on-white:hover{
+  transition: background-color 0.5s ease;
+  background-color: #ff3427;
+  border: 2px #ff3427 solid;
+  color: white;
+}
+/*CREATE EVENT FORM*/
+
+.main-heading {
+  color: #444444;
+  font-family: Lato-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+}

@@ -1,32 +1,32 @@
-<h1>Events</h1>
-
+<h1 class="main-heading">Create.</h1>
+<hr>
 <%= form_for (@event) do |f| %>
 	<div class="field">
 		<%= f.label :event_name %><br />
-		<%= f.text_field :event_name %>
+		<%= f.text_field :event_name, class: 'form-control', placeholder: 'Event Name' %>
 	</div>
 
 	<div class="field">
 		<%= f.label :description %><br />
-		<%= f.text_area :description %>
+		<%= f.text_area :description, class: 'form-control', placeholder: 'Description' %>
 	</div>
 
 	<div class="field">
 		<%= f.label :event_datetime %><br />
-		<%= f.datetime_select :event_datetime %>
+		<%= f.datetime_select :event_datetime,  class: 'datetime-buttons', placeholder: 'Date & Time' %>
 	</div>
 
 	<div class="field">
 		<%= f.label :location %><br />
-		<%= f.text_field:location %>
+		<%= f.text_field :location, class: 'form-control', placeholder: 'Location' %>
 	</div>
 
 	<div class="field">
 		<%= f.label :url %><br />
-		<%= f.text_field :url %>
-	</div>
+		<%= f.text_field :url,  class: 'form-control', placeholder: 'Website' %>
+	</div><br><br>
 	
 	<div id="sumbit">
-		<%= f.submit %>
+		<%= f.submit "Submit", class: 'btn btn-lg btn-primary btn-block on-white' %>
 	</div>
 <% end %> 
