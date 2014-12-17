@@ -2,20 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.event-header > h3 {
-  color: #6B6E80;
-  font-size: 50px;
-  text-transform: capitalize;
-  font-family: Helvetica Neue;
-  font-weight: 200;
+.event-header {
+  text-align: center;
+  // border: 5px #888888 solid;
+  border: 5px black solid;
 }
 
-.panel-heading.event-header {
-  background-color: #FFF;
-  color: #6B6E80;
-  text-align: center;
+h3.event-title {
+  // color: #888888;
+  color: black;
+  font-size: 50px;
+  font-family: 'Lato-light';
+  text-transform: uppercase;
+ 
 }
 
 .byline {
-  color: #5BC0DE;
+  color: #FF3427;
+  font-size: 16px;
+  font-family: 'Lato-Regular';
 }
+
+.event-info > p {
+  color: #888888;
+  font-size: 16px;
+  font-family: 'Lato-Regular';
+  // position: fixed;
+  // top: 30px;
+  // right: 5px;
+}
+
+
+
