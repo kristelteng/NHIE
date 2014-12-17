@@ -585,3 +585,9 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 .text-red {
   color: #ff3427;
 }
+
+.form-control:focus{
+  border-color: #444444;
+  -webkit-box-shadow: 0 0 5px rgba(255, 52, 39, 1);
+  box-shadow: 0 0 5px rgba(255, 52, 39, 1);
+}
