@@ -3,11 +3,13 @@
 @import "messages";
 @import "events";
 
+/*GLYPHICONS LINK*/
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('/assets/glyphicons-halflings-regular.eot');
   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+/*GLYPHICONS LINK*/
 
 /*FONTS*/
 @font-face {
@@ -30,11 +32,17 @@
   font-family: Cardoi99;
   src: url('/fonts/Cardoi99.otf');
 }
-/*FONTS*/
 
+/*FONTS*/
+.main-large-logo {
+  /*height: 300px;*/
+  width: 300px;
+  margin-top: 25px;
+}
 
 html, body {
   min-height: 100%;
+  font-family: Lato-Regular;
   /*background-color:#e9e9e9;*/
 }
 a {
@@ -118,38 +126,45 @@ a {
 }
 .glyphicon.glyphicon-tasks {
   font-size: 25px;
-  color: #444444;
+  color: white;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+  height: 110px;
+  background-color: #414141;
+  text-align: center;
 }
 
 /*navbar search*/
 .navbar-form {
-	/*margin-top: -2.3%;*/
+	margin-top: -70px;
+  background: none;
 }
 #search-form {
   /*background-color: white;*/
 }
-#search {
+#query {
   /*border: 2px white solid;*/
   border-radius: 0px;
-  font-family: Lato-Bold;
+  font-family: Lato-Regular;
   font-size: 1em; 
-  /*height: 30px;*/
-  padding-right: 0px;
+  height: 38px;
+  margin-right: -4px;
 }
-input.btn.btn-default.thin.form-control{
+input.btn.btn-default.search-submit{
     border-radius: 0px;
-    height: 34px;
-    border: 2px #444444 solid;
+    /*height: 28px;*/
+    border: 2px white solid;
     background: none;
     color: #ff3427;
     font-family: Lato-Light;
     text-transform: uppercase;
     font-size: 1em;
+    vertical-align: top;
 }
-input.btn.btn-default.thin.form-control:hover{
+input.btn.btn-default.search-submit:hover{
   transition: 0.3s ease;
     border-radius: 0px;
-    height: 34px;
+    /*height: 28px;*/
     border: 2px #ff3427 solid;
     background-color: #ff3427;
     color: white;
@@ -437,6 +452,7 @@ a.event-list-titles-light {
   color: white;
   font-size: 0.9em;
   display: block;
+  margin-top: 5%;
 }
 a.event-list-titles-light:first-letter {
  text-transform: capitalize;
@@ -541,23 +557,25 @@ input.btn.btn-lg.btn-primary.btn-block.on-white:hover {
 }
 
 a.btn.btn-lg.btn-primary.btn-block {
-  font-family: Lato-Regular;
+  font-family: Lato-Light;
   background-color: #ff3427;
   border: 2px #ff3427 solid;
   color: white;
   border-radius: 0px;
   width: 300px;
-  word-spacing: -12px;
+  font-size: 1em;
+  /*word-spacing: -12px;*/
   -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
 
 }
 a.btn.btn-lg.btn-primary.btn-block:hover {
-  font-family: Lato-Regular;
+  font-family: Lato-Light;
   background-color: #ff3427;
   border: 2px #ff3427 solid;
   color: white;
   border-radius: 0px;
   width: 330px;
+  font-size: 1em;
 }
 /*CREATE EVENT FORM*/
 
@@ -594,9 +612,10 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 
 /*USERS SHOW PAGE*/
 .profile-background {
-  height: 300px; 
+  height: 230px; 
   width: 80%;
   margin: auto;
+  margin-top: 8%;
   background-image: image-url("blurred_cups_profile.jpg");
   background-size: 100%;
   background-repeat: none;
@@ -607,10 +626,15 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   text-align: center;
 }
 .profile-photo > img {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   margin: auto;
-  margin-top: -100px;
+  margin-top: -150px;
   border: 4px white solid;
 }
+
+.col-sm-6.col-sm-offset-3 {
+  margin-top: 2%;
+}
+

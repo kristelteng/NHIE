@@ -16,8 +16,10 @@
 		  <% end %>
 		<% end %>
 	<!-- ++++++//WED NAV BAR\\++++++ -->
+
 <% if logged_in? %>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<%= image_tag("main-large-logo.png", class: 'main-large-logo')  %>
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -29,19 +31,23 @@
       </button>
       <!-- <a class="navbar-brand" href="#">Brand</a> -->
 
-
     <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- <ul class="nav navbar-nav navbar-right"> -->
         <!-- <a href="#">Link</a> -->
       <!-- </ul> -->
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-   		<%= render :partial => 'events_search' %>
-      <!-- <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form> -->
+   		<%#= render :partial => 'events_search' %>
+      <!-- <form class="navbar-form navbar-right" role="search"> THIS HAS THE -->
+        <!-- <div class="form-group"> -->
+          <%= form_tag all_search_path, class: 'navbar-form navbar-right form-group form-control'  do %>
+  					<%= text_field_tag "query", nil, placeholder: 'Search' %>
+  					<%= submit_tag "Search", class: "btn btn-default search-submit" %>
+					<% end %>
+					<!-- <input type="text" class="form-control" placeholder="Search"> -->
+        <!-- </div> -->
+        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+      </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -96,6 +102,7 @@
 			      &#8801;
 			    </a> -->
 			    <%#= render :partial => 'events_search' %>
+
 			  </header>
 			<% end %>
 		  <div class="content">

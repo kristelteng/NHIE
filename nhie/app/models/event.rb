@@ -11,5 +11,4 @@ class Event < ActiveRecord::Base
   has_many :participation
   has_many :participants, through: :participation, source: :user
 
-
 end

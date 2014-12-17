@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   # validates :image, presence: true
 
   has_many :friendships, :dependent => :destroy
+
   # has_many :friends, :through => :friendships, class_name: "User"
 
   def friends

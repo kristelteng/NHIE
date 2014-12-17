@@ -4,7 +4,7 @@
 <%#= render :partial => 'events_search' %>
 
 <%= link_to new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' do %>
-	<span class="glyphicon glyphicon-plus"> Create a new event!</span> 
+	<span class="glyphicon glyphicon-plus"></span> CREATE A NEW EVENT 
 <% end %>
 
 <%#= link_to "Create a new Event!", new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' %>
@@ -19,12 +19,16 @@
 		      <!-- The front face -->
 					<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
 		    </div>
+
+
 		    <div class="back">
 		       <!-- The back face -->
 		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
 		      <hr class="event-index-card-lines">
-					<p class="event-description"><%= event.description %></p><br />
+					<p class="event-description"><%= event.description.truncate(200) %></p><br />
 		    </div>
+
+
 		  	<div class="clear"></div>
 			</div>
 		</div>

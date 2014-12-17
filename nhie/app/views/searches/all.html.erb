@@ -1,0 +1,41 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%= form_tag all_search_path do %>
+  <%= text_field_tag "query" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+RESULTS
+
+<h1>Friends Events</h1>
+<p><%= render @friend_event_matches %></p>
+
+<h1>My Events</h1>
+<p><%= render @created_event_matches %></p>
+
+<h1>Friends</h1>
+<p><%= render @friend_matches %></p>
+
+<h1>Everyone</h1>
+<p><%= render @user_matches %></p>
