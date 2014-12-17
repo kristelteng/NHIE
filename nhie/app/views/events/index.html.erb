@@ -1,8 +1,13 @@
-<h1 class="main-heading">Events</h1>
+<h1 class="main-heading">Events.</h1>
+<hr>
 
 <%#= render :partial => 'events_search' %>
 
-<p><%= link_to "Create a new Event!", new_event_path %></p>
+<%= link_to new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' do %>
+	<span class="glyphicon glyphicon-plus"> Create a new event!</span> 
+<% end %>
+
+<%#= link_to "Create a new Event!", new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' %>
 
 <!-- Below must be tested -->
 <h3 class="sub-heading">My events</h3>
