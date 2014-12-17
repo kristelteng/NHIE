@@ -282,7 +282,7 @@ margin-left: auto;
   max-width: 280px;
   padding: 15px;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 11%;
   float: right;
   margin-right: 20%;
   text-align: left;
@@ -292,7 +292,7 @@ margin-left: auto;
   max-width: 280px;
   padding: 15px;
   margin: 0 auto;
-  margin-top: 7%;
+  margin-top: 4%;
   float: right;
   margin-right: 20%;
 }
@@ -310,6 +310,17 @@ label {
 .form-control::-webkit-input-placeholder, textarea.box::-webkit-input-placeholder {
   color: #cccccc;
 }
+.Signin-page-heading {
+  color: white;
+  font-family: Lato-Light;
+  margin-bottom: 4px;
+}
+.Signin-page-line {
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+/*SIGNIN FORM*/
+
 /*USERNAME INPUT*/
 input#username, 
 input#password, 
@@ -444,10 +455,18 @@ input.btn.btn-lg.btn-primary.btn-block.on-white:hover{
 }
 /*CREATE EVENT FORM*/
 
+/*HEADINGS*/
 .main-heading {
   color: #444444;
   font-family: Lato-Light;
   text-transform: uppercase;
   margin-bottom: 10px;
-
 }
+.sub-heading {
+  color: #444444;
+  font-family: Lato-BOLD;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+/*HEADINGS*/

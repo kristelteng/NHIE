@@ -1,11 +1,11 @@
-<h1>Events</h1>
+<h1 class="main-heading">Events</h1>
 
 <%#= render :partial => 'events_search' %>
 
 <p><%= link_to "Create a new Event!", new_event_path %></p>
 
 <!-- Below must be tested -->
-<h3>My events</h3>
+<h3 class="sub-heading">My events</h3>
 	<% @created_events.each do |event| %>
 		<!-- FLIPPING CONTAINER -->
 		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
@@ -28,7 +28,7 @@
 <% end %>
 
 
-<h3>Friend events</h3>
+<h3 class="sub-heading">Friend events</h3>
 	<% @friends_events.each do |event| %>
 			<!-- FLIPPING CONTAINER -->
 		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">

@@ -3,6 +3,8 @@
   <div id="signup-logos"></div>
 
   <div class="form-signup">
+    <h3 class="Signin-page-heading">CREATE AN ACCOUNT.</h3>
+    <hr class="Signin-page-line">
   <% if !@user.errors.messages.blank? %> 
     <% @user.errors.full_messages.each do |message| %>
       <div class="alert">
