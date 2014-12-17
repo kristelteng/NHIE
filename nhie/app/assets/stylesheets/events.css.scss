@@ -4,20 +4,22 @@
 
 .event-header {
   text-align: center;
-  // border: 5px #888888 solid;
-  border: 5px black solid;
+  /*// border: px #888888 solid;*/
+  border: 3px #444444 solid;
   margin-bottom: 50px;
   padding-bottom: 16px;
+  height: 200px;
 }
 
 h3.event-title {
   // color: #888888;
   color: black;
-  font-size: 50px;
+  font-size: 2.3em;
   font-family: 'Lato-light';
   text-transform: uppercase;
   word-wrap: break-word;
   margin-bottom: 0px;
+  margin-top: 10%;
 }
 
 .byline {

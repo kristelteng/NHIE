@@ -398,9 +398,9 @@ a {
 .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
-  background: #888888;
+  background: #666666;
 }
-.front { z-index: 2;  color: #666666; border: 3px #888888 solid;}
+.front { z-index: 2;  color: #666666; border: 3px #444444 solid;}
 
 .vertical-flip-container .back {
   -webkit-transform: rotateX(180deg);
