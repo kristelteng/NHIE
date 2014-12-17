@@ -1,6 +1,6 @@
 <% if message.id.present? %>
 <div class="message row">
-  <div class="col-md-12">
+  <div class="col-sm-12">
     <div class="message-avatar">
       <%= image_tag(message.user.image, size: "65x65") %>
     </div>
@@ -8,8 +8,8 @@
 
       <div class="message-title">
         <% if message.user != nil %>
-        <%= message.created_at.strftime("%d %b. %Y %H:%M") %>
-        <em><%= message.user.username %> says:</em>
+        <em class="text-red"><%= message.user.username %> says:</em>
+        <span class="message-timestamp"><%= message.created_at.strftime("%d %b. %Y %H:%M") %></span>
 
       </div>
       <p><%= message.body %></p>
