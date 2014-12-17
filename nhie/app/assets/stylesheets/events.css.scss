@@ -6,6 +6,8 @@
   text-align: center;
   // border: 5px #888888 solid;
   border: 5px black solid;
+  margin-bottom: 50px;
+  padding-bottom: 16px;
 }
 
 h3.event-title {
@@ -14,23 +16,55 @@ h3.event-title {
   font-size: 50px;
   font-family: 'Lato-light';
   text-transform: uppercase;
- 
+  word-wrap: break-word;
+  margin-bottom: 0px;
 }
 
 .byline {
   color: #FF3427;
   font-size: 16px;
-  font-family: 'Lato-Regular';
+}
+
+.event-section {
+  margin-top: 20px;
 }
 
 .event-info > p {
-  color: #888888;
+  color: #888;
   font-size: 16px;
-  font-family: 'Lato-Regular';
-  // position: fixed;
-  // top: 30px;
-  // right: 5px;
 }
 
+.event-info > a {
+  text-transform: capitalize;
+  font-size: 16px;
+}
 
+// label on left
+.event-label:before {
+  width: 25%;
+  margin-left: 75%;
+  border-top: 1px solid #CCC;
+  display: block;
+  content: "";
+  margin-bottom: 5px;
+}
 
+.event-label {
+  width: 150px;
+  position: absolute;
+  left: -175px;
+  text-align: right;
+  color: #CCC;
+  font-family: Cardoi99;
+  text-transform: uppercase;
+}
+// label on the left
+
+input.btn.btn-default.thin.form-control.event-button {
+  border: 1px solid #CCC;
+  box-shadow: none;
+  margin-top: 5px;
+}
+input.btn.btn-default.thin.form-control.event-button.event-action {
+  margin: 75px 0;
+}
