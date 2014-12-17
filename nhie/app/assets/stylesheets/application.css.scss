@@ -410,6 +410,7 @@ a {
   -webkit-transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
 }
+
 /*FLIPPING CONTAINER*/
 
 a.event-list-titles-dark {
@@ -425,7 +426,18 @@ a.event-list-titles-light {
   font-family: Lato-Bold;
   color: white;
   font-size: 0.9em;
+  display: block;
 }
+a.event-list-titles-light:first-letter {
+ text-transform: capitalize;
+}
+
+a.event-list-titles-light:hover {
+  font-family: Lato-Bold;
+  color: #ff3427;
+  font-size: 0.9em;
+}
+
 
 hr.event-index-card-lines {
   width: 75px;

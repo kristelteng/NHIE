@@ -6,7 +6,7 @@
   text-align: center;
   /*// border: px #888888 solid;*/
   border: 3px #444444 solid;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   padding-bottom: 16px;
   height: 200px;
 }
@@ -86,11 +86,34 @@ h3.event-title {
   margin-top: 20px;
 }
 
-input.btn.btn-default.thin.form-control.event-button {
-  border: 1px solid #CCC;
+input.btn.btn-default.thin.form-control.event-button.delete-message {
+  border: 2px #ff3427 solid;
+  background-color: #ff3427;
   box-shadow: none;
   margin-top: 5px;
+  width: 300px;
+  color: white;
 }
+
+input.btn.btn-default.thin.form-control.event-button.delete-message:hover {
+  -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+  width: 330px;
+  border: 2px #ff3427 solid;
+}
+
+
+input.btn.btn-default.thin.form-control.event-button.create-message{
+  float: right;
+  width: 300px;
+  border: 2px #888888 solid;
+}
+input.btn.btn-default.thin.form-control.event-button.create-message:hover {
+  float: right;
+  width: 300px;
+  border: 2px #ff3427 solid;
+}
+
+
 input.btn.btn-default.thin.form-control.event-button.event-action {
   margin: 75px 0;
 }
