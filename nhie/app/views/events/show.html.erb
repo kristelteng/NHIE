@@ -40,7 +40,7 @@
 <% if !current_user.participated_events.include?(@event) %>
 <%= button_to "Join Event", event_join_path(@event), method: :post, class: 'btn btn-default thin form-control event-button event-action'  %>
 <% elsif %>
-<h3> You are attending this event!</h3>
+<h3 class="event-attendance"> You are attending this event!</h3>
 <% end %>
 <% end %>
 
