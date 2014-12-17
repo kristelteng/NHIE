@@ -24,24 +24,45 @@
 						<%= image_tag(current_user.image, size: "200x200") %>
 					</div>
 					<h1 class="sidebar-name">Howdy, <%=current_user.username %>!</h1>
-					<hr>
+					<hr class="sidebar-hr">
 					<div class="sidebar-links">
-						<%= link_to("Log out", logout_path) unless current_page?(login_path) %>
-						<%= link_to("Profile", user_url(current_user)) %>
-						<%= link_to("Friends", users_url)%>
-						<%= link_to("Events", events_url)%>
+						<%#= link_to("Profile", user_url(current_user)) %>
+						<%#= link_to("Events", events_url)%>
+						<%#= link_to("Friends", users_url)%>
+						<%#= link_to("Log out", logout_path) unless current_page?(login_path) %>
+
+						<%= link_to user_url(current_user) do %>
+  						<span class="glyphicon glyphicon-user"> PROFILE</span> 
+						<% end %> 
+						<%= link_to events_path("Events") do %>
+  						<span class="glyphicon glyphicon-list-alt"> EVENTS</span>
+						<% end %>
+						<%= link_to users_url("Friends") do %>
+  						<span class="glyphicon glyphicon-pencil"> FRIENDS</span> 
+						<% end %> 
+						<%= link_to logout_path("Log out") do %>
+  						<span class="glyphicon glyphicon-off"> LOGOUT</span> 
+						<% end %>
+
+						<p class="member-since">Member Since <%= current_user.created_at.strftime("%d %b. %Y") %></p>
 					</div>
 				<% end %>
 	</nav>
 		<div class="page-wrap">
 		  <% if logged_in? %>
 			  <header class="main-header">
+			    <!-- <a href="#main-nav" class="open-menu toggle-menu">
+			      &#8801;
+			    </a> -->
 			    <a href="#main-nav" class="open-menu toggle-menu">
-			      &#8801;
+			    	<span class="glyphicon glyphicon-tasks"></span>
 			    </a>
-			    <a href="#" class="close-menu toggle-menu">
+ 					<a href="#" class="close-menu toggle-menu">
+ 						<span class="glyphicon glyphicon-tasks"></span>
+ 					</a>
+			    <!-- <a href="#" class="close-menu toggle-menu">
 			      &#8801;
-			    </a>
+			    </a> -->
 			    <h1 class="nav-bar-title">SIDE NAV WEBSITE</h1>
 			    <%= render :partial => 'events_search' %>
 			  </header>

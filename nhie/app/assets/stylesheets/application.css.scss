@@ -3,6 +3,11 @@
 @import "messages";
 @import "events";
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
 
 /*FONTS*/
 @font-face {
@@ -120,6 +125,9 @@ a {
 }
 .close-menu {
   display: none;
+}
+.glyphicon.glyphicon-tasks {
+  font-size: 20px;
 }
 
 /*navbar search*/
@@ -461,16 +469,31 @@ p.event-description {
   text-align: center;
   color: white;
   opacity: 100;
-  margin-top: 10%;
-  font-family: Lato-Regular;
-  border-bottom: 1px #888888 solid;
+  /*margin-top: 5%;*/
+  margin: 0;
+  padding: 10;
+  font-family: Lato-Light;
+  font-size: 1em;
+  border: 1px rgba(60, 60, 60, 0.25) solid;
+  text-transform: uppercase;
 }
 .sidebar-name {
   color: white;
   font-family: Lato-Bold;
   font-size: 1.2em;
   text-align: center;
-
+}
+.member-since {
+  color: #888888;
+  font-size: 0.7em;
+  font-family: Lato-Light;
+  position: absolute;
+  bottom: 0;
+  /*text-align: center;*/
+  margin-left: 20%;
+}
+.sidebar-hr {
+  border-color: #666666;
 }
 /*SIDEBAR*/
 
@@ -480,7 +503,7 @@ input.btn.btn-lg.btn-primary.btn-block.on-white {
   border: 2px #888888 solid;
   color: #888888;
   font-family: Lato-Regular;
-
+  margin-bottom: 75px;
   background: none;
 }
 input.btn.btn-lg.btn-primary.btn-block.on-white:hover{
@@ -488,6 +511,9 @@ input.btn.btn-lg.btn-primary.btn-block.on-white:hover{
   background-color: #ff3427;
   border: 2px #ff3427 solid;
   color: white;
+}
+#event_event_name, #event_description, #event_location, #event_url {
+  border-color: #888888;
 }
 /*CREATE EVENT FORM*/
 
