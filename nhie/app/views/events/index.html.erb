@@ -42,6 +42,7 @@
 <div class="item-section">
 	<div class="item-label">Friend events</div>
 	<% @friends_events.each do |event| %>
+			
 			<!-- FLIPPING CONTAINER -->
 		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
 		  <div class="flipper">
@@ -53,7 +54,7 @@
 		       <!-- The back face -->
 		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
 		      <hr class="event-index-card-lines">
-					<p class="event-description"><%= event.description %></p><br />
+					<p class="event-description"><%= event.description.truncate(200) %></p><br />
 		    </div>
 		  	<div class="clear"></div>
 			</div>
