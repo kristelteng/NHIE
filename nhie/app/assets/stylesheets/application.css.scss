@@ -671,10 +671,6 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   font-size: 16px;
 }
 
-.item-info:first-letter {
- text-transform: capitalize;
-}
-
 // label on left
 .item-label:before {
   width: 25%;
@@ -686,9 +682,9 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 }
 
 .item-label {
-  width: 150px;
+  width: 175px;
   position: absolute;
-  left: -175px;
+  left: -200px;
   text-align: right;
   color: #CCC;
   font-family: Cardoi99;
