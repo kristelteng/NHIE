@@ -3,31 +3,34 @@
 
 <div class="item-section">
 	<div class="item-label">good ol' friends</div>		
-	<div class="item-info">
-<!-- 		<p>Friends.</p> -->
-		<div class="user-content">		
-			<% @f.each do |user| %>
-				<div class="user-row">
-					<%= render user %> 
-					<%= link_to user_remove_path(user), method: :post, class: "user-action" do %>
-						<i class="glyphicon glyphicon-remove"></i>
-					<% end %>
-				</div>
-			<% end %> 
+	<div class="item-info friends">
+		<div class="user-content">
+			<% if @f.empty? %>
+				<p>You have no friends yet</p>
+			<% else %>	
+				<% @f.each do |user| %>
+					<div class="user-row">
+						<%= link_to user.username, user_path(user) %>
+						<%= link_to user_remove_path(user), method: :post, class: "user-action" do %>
+							<i class="glyphicon glyphicon-remove"></i>
+						<% end %>
+					</div>
+				<% end %>
+			<% end %>
 		</div>
 	</div>
 </div>
 
 <div class="item-section">
 	<div class="item-label">Incoming Requests</div>		
-	<div class="item-info">
+	<div class="item-info friends">
 		<div class="user-content">
 			<% if @ifr.empty? %>
 				<p>No pending requests</p>
 			<% else %>	
 				<% @ifr.each do |user| %>
 					<div>
-						<%= render user %> 
+						<%= link_to user.username, user_path(user) %> 
 						<%= link_to user_approve_path(user), method: :post, class: "user-action" do %>
 							<i class="glyphicon glyphicon-plus"></i>
 						<% end %>
@@ -43,13 +46,13 @@
 
 <div class="item-section">
 	<div class="item-label">Sent Requests</div>		
-	<div class="item-info">
+	<div class="item-info friends">
 		<div class="user-content">
 			<% if @ofr.empty? %>
 				<p>No pending requests</p>
 			<% else %>
 				<% @ofr.each do |user| %>
-					<div><%= render user %></div> 
+					<div><%= link_to user.username, user_path(user) %></div> 
 				<% end %> 
 			<% end %>
 		</div>
@@ -58,14 +61,14 @@
 
 <div class="item-section">
 	<div class="item-label">not friends. . .yet</div>
-	<div class="item-info">
+	<div class="item-info friends">
 		<div class="user-content">
 			<% if @nf.empty? %>
 				<p>There is no one else to friend</p>
 			<% else %>		
 				<% @nf.each do |user| %>
 					<div class="user-row">
-						<%= render user %> 
+						<%= link_to user.username, user_path(user) %> 
 						<%= link_to user_request_friendship_path(user), method: :post, class: "user-action" do %>
 							<i class="glyphicon glyphicon-plus"></i>
 						<% end %>
