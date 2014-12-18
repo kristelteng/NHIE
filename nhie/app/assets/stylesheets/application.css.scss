@@ -40,10 +40,17 @@
 }
 /*FONTS*/
 
-.main-large-logo {
-  /*height: 300px;*/
+.nhie-nav {
+  padding-top: 15px;
+}
+
+.main-large-logo{
   width: 300px;
-  margin-top: 25px;
+}
+
+.main-large-logo > img {
+  width: 300px;
+  margin-top: 10px;
 }
 
 html, body {
@@ -126,7 +133,7 @@ a {
   width: 34px;
 }
 .content {
-  padding-top: 100px;
+  padding-top: 120px;
   font-family: 'Lato-Regular';
 }
 .close-menu {
@@ -142,9 +149,6 @@ nav.navbar.navbar-default.navbar-fixed-top {
   text-align: center;
 }
 .nav-bar-link {
-  float: left; 
-  margin-left: 62px;
-  margin-top: -70px;
   font-size: 1.3em;
   color: white;
   font-family: Lato-Light;
@@ -154,7 +158,6 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 /*navbar search*/
 .navbar-form {
-	margin-top: -70px;
   background: none;
 }
 #search-form {
@@ -304,7 +307,7 @@ div#signup-logos:hover {
   width: 250px;
   height: 250px;
   margin-right: auto;
-margin-left: auto;
+  margin-left: auto;
 } 
 
 .signup-logo-left{
@@ -627,7 +630,6 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 /*USERS SHOW PAGE*/
 .profile-background {
   height: 230px; 
-  width: 80%;
   margin: auto;
   margin-top: 8%;
   background-image: image-url("blurred_cups_profile.jpg");
@@ -638,6 +640,7 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 .profile-photo {
   margin: auto;
   text-align: center;
+  position: relative;
 }
 .profile-photo > img {
   width: 300px;
@@ -646,10 +649,6 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   margin: auto;
   margin-top: -150px;
   border: 4px white solid;
-}
-
-.col-sm-6.col-sm-offset-3 {
-  margin-top: 2%;
 }
 
 .user-action {
