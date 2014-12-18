@@ -628,14 +628,42 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 /*USERS SHOW PAGE*/
 .profile-background {
   height: 230px; 
-  width: 80%;
+  width: 100%;
   margin: auto;
   margin-top: 8%;
-  background-image: image-url("blurred_cups_profile.jpg");
+  /*background-image: image-url("blurred_cups_profile.jpg");*/
   background-size: 100%;
   background-repeat: none;
-  border: 3px #444444 solid;
+  /*border: 3px #444444 solid;*/
+  overflow: hidden;
+  position: relative;
 }
+/*%%%%BLUR%%%%%*/
+.profile-background img {
+  /* max-height: 300px; */
+  width: 112%;
+  margin-top: -173px;
+  /* height: initial; */
+  /* margin-bottom: -50px; */
+  background-size: initial;
+  -webkit-filter: blur(50px);
+  filter: blur(25px);
+  margin-left: -50px;
+  margin-right: 50px;
+}
+.profile-background2 img {
+  /* max-height: 300px; */
+  width: 112%;
+  margin-top: -530px;
+  /* height: initial; */
+  /* margin-bottom: -50px; */
+  background-size: initial;
+  -webkit-filter: blur(50px);
+  filter: blur(25px);
+  margin-left: -50px;
+  margin-right: 50px;
+}
+/*%%%%BLUR%%%%%*/
 .profile-photo {
   margin: auto;
   text-align: center;
@@ -644,9 +672,11 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  margin: auto;
+  margin-left: -150px;
   margin-top: -150px;
   border: 4px white solid;
+    position: absolute;
+
 }
 
 .col-sm-6.col-sm-offset-3 {
