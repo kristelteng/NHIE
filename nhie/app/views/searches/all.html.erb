@@ -1,41 +1,22 @@
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<%= form_tag all_search_path do %>
-  <%= text_field_tag "query" %>
-  <%= submit_tag "Search" %>
-<% end %>
+<%#= form_tag all_search_path do %>
+  <%#= text_field_tag "query" %>
+  <%#= submit_tag "Search" %>
+<%# end %>
 
 
-RESULTS
+<h3 class="minor-heading">RESULTS</h3>
 
-<h1>Friends Events</h1>
-<p><%= render @friend_event_matches %></p>
+<h1 class="main-heading">Friends Events</h1>
+<div class="results-div"><%= render @friend_event_matches %></div>
+<hr>
 
-<h1>My Events</h1>
-<p><%= render @created_event_matches %></p>
+<h1 class="main-heading">My Events</h1>
+<div class="results-div"><%= render @created_event_matches %></div>
+<hr>
 
-<h1>Friends</h1>
-<p><%= render @friend_matches %></p>
+<h1 class="main-heading">Friends</h1>
+<div class="results-div"><%= render @friend_matches %></div>
+<hr>
 
-<h1>Everyone</h1>
-<p><%= render @user_matches %></p>
+<h1 class="main-heading">Everyone</h1>
+<div class="results-div"><%= render @user_matches %></div>

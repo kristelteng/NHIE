@@ -1,3 +1,28 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.minor-heading {
+	font-size: 1em;
+	font-family: Lato-Bold;
+	color: #ff3427;
+	margin-top: 10%;
+}
+.results-div div h3  a {
+	font-family: Lato-Regular;
+	font-size: 1em;
+	color: #888888;
+}
+.results-div div h3  a:hover {
+	font-family: Lato-Regular;
+	font-size: 1em;
+	color: #ff3427;
+}
+/*div.results-div > div > h3 > a:first-letter {
+	text-transform: capitalize;
+}
+*/
+
+/*.results-div div h3 {
+	padding: 30px;
+	margin-top: -55px;
+}*/
