@@ -15,7 +15,4 @@
 /log/*.log
 /tmp
 
-
 /public/uploads
-heroku keys:add
-heroku keys:add.pub
