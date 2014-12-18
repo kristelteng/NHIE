@@ -1,24 +1,46 @@
 <div class="profile-background"></div>
 <div class="profile-photo">
   <%= image_tag @user.image_url %>
+  <% if @user == current_user %> 
+    <div class="friend-count">
+      <div><%= current_user.friends.count %></div>
+      <em>friends</em>
+    </div>
+  <% end %>
 </div>
 
-<h1><%= @user.first_name %></h1>
-<h3>Created events:</h3>
-  <% @user.created_events.each do |event| %>
-  	<%= event.event_name %>
-  	<br/>
-  <% end %>
+<div class="item-section">
+  <div class="item-label">Created events</div>
+  <div class="item-info friends">
+    <% if @user.created_events.empty? %>
+      You have not created an event yet
+    <% else %>
+      <% @user.created_events.each do |event| %>
+        <div>
+          <%= link_to event.event_name, event_path(event) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
-<h3>Joined events:</h3>
-  <% @user.participated_events.each do |event| %>
-    <%= event.event_name %>
-    <br/>
-  <% end %>
-
+<div class="item-section">
+  <div class="item-label">Joined events</div>
+  <div class="item-info friends">
+    <% if @user.participated_events.empty? %>
+      You have not joined an event yet
+    <% else %>
+      <% @user.participated_events.each do |event| %>
+        <div>
+          <%= link_to event.event_name, event_path(event) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <!-- Only shows 'Add Friend' button if: you aren't already friends or you havent already requested to be friends.  -->
-	<%# if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
+  <%# if @user == !(current_user || current_user.request_friendship!(@user) || current_user.friends?(@user)) %>
     
     <%# form_for(:friendship, :url => user_friends_path(:user_id => current_user.id, :friend_id => @user.id)) do |f| %>
       <%#= submit_tag "Add to My Friends" %>
@@ -26,7 +48,19 @@
   <%# end %>
 <%# end %>
 
-<!-- This has to change to show only friends (friendship = true) and not all users.  -->
-<div class="my-friends">
-	<%= render :partial => 'my_friends' %>
-</div>
+<% if @user == current_user %>
+  <div class="item-section">
+    <div class="item-label">good ol' friends</div>
+    <div class="item-info friends">
+      <% if @user.friends.empty? %>
+        You do not have any friends yet
+      <% else %>
+        <% @user.friends.each do |friend| %>
+            <div>
+            <%= link_to friend.username, user_path(friend) %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
