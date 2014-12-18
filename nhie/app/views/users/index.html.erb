@@ -29,7 +29,7 @@
 				<p>No pending requests</p>
 			<% else %>	
 				<% @ifr.each do |user| %>
-					<div>
+					<div class="user-row">
 						<%= link_to user.username, user_path(user) %> 
 						<%= link_to user_approve_path(user), method: :post, class: "user-action" do %>
 							<i class="glyphicon glyphicon-plus"></i>
@@ -52,7 +52,7 @@
 				<p>No pending requests</p>
 			<% else %>
 				<% @ofr.each do |user| %>
-					<div><%= link_to user.username, user_path(user) %></div> 
+					<div class="user-row"><%= link_to user.username, user_path(user) %></div> 
 				<% end %> 
 			<% end %>
 		</div>
