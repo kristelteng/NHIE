@@ -10,7 +10,8 @@
 <%#= link_to "Create a new Event!", new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' %>
 
 <!-- Below must be tested -->
-<h3 class="sub-heading">My events</h3>
+<div class="item-section">
+	<div class="item-label">My events</div>
 	<% @created_events.each do |event| %>
 		<!-- FLIPPING CONTAINER -->
 		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
@@ -34,10 +35,12 @@
 		</div>
 		<div class="clear"></div><br>
 		<!-- FLIPPING CONTAINER -->
-<% end %>
+	<% end %>
+</div>
 
 
-<h3 class="sub-heading">Friend events</h3>
+<div class="item-section">
+	<div class="item-label">Friend events</div>
 	<% @friends_events.each do |event| %>
 			<!-- FLIPPING CONTAINER -->
 		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
@@ -58,3 +61,4 @@
 		<div class="clear"></div><br>
 		<!-- FLIPPING CONTAINER -->
 	<% end %>
+</div>
