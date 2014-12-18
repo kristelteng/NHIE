@@ -41,11 +41,17 @@ gem 'sorcery'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'pry-rails'
-gem 'quiet_assets'
-gem 'awesome_print'
-gem 'better_errors'
-gem 'binding_of_caller'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'rails_12factor' 
+
+group :development do
+	gem "sqlite3"
+	gem 'quiet_assets'
+	gem 'awesome_print'
+	gem 'better_errors'
+	gem 'pry-rails'
+	gem 'binding_of_caller'
+end
+
 
