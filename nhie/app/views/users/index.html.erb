@@ -12,7 +12,7 @@
 					<div class="user-row">
 						<%= link_to user.username, user_path(user) %>
 						<%= link_to user_remove_path(user), method: :post, class: "user-action" do %>
-							<i class="glyphicon glyphicon-remove"></i>
+							<i class="glyphicon glyphicon-minus-sign"></i>
 						<% end %>
 					</div>
 				<% end %>
@@ -32,10 +32,10 @@
 					<div class="user-row">
 						<%= link_to user.username, user_path(user) %> 
 						<%= link_to user_approve_path(user), method: :post, class: "user-action" do %>
-							<i class="glyphicon glyphicon-plus"></i>
+							<i class="glyphicon glyphicon-plus-sign"></i>
 						<% end %>
 						<%= link_to user_reject_path(user), method: :post, class: "user-action" do %>
-							<i class="glyphicon glyphicon-remove"></i>
+							<i class="glyphicon glyphicon-remove-sign"></i>
 						<% end %>
 					</div>
 				<% end %>
@@ -52,6 +52,7 @@
 				<p>No pending requests</p>
 			<% else %>
 				<% @ofr.each do |user| %>
+					<i class="glyphicon glyphicon-send"></i>
 					<div class="user-row"><%= link_to user.username, user_path(user) %></div> 
 				<% end %> 
 			<% end %>
@@ -70,7 +71,7 @@
 					<div class="user-row">
 						<%= link_to user.username, user_path(user) %> 
 						<%= link_to user_request_friendship_path(user), method: :post, class: "user-action" do %>
-							<i class="glyphicon glyphicon-plus"></i>
+							<i class="glyphicon glyphicon-plus-sign"></i>
 						<% end %>
 					</div>
 				<% end %> 

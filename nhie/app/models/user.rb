@@ -82,6 +82,14 @@ class User < ActiveRecord::Base
     friends.include? other
   end
 
+  def destroy_participations(enemy)
+    self.participated_events
+      .where(creator_id: enemy.id)
+      .map{|event| Participation.where(event_id: event.id, user_id: self.id) }
+      .flatten
+      .map{|event| event.destroy; event.save}
+  end
+
   #--------------------
   # event stuff
   #--------------------

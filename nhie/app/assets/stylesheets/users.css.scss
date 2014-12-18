@@ -39,3 +39,12 @@ h1{
 .friend-count > em {
   font-size: 16px;
 }
+
+.glyphicon.glyphicon-send {
+  float: right;
+  color: #ff3427;
+}
+
+a.user-action > i:hover {
+  color: #888888;
+}

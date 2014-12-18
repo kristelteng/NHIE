@@ -473,7 +473,7 @@ a.event-list-titles-dark {
   font-size: 1.3em;
   text-transform: uppercase;
   display: inline-block;
-  margin-top: 10%
+  margin-top: 52px;
 }
 
 a.event-list-titles-light {
@@ -593,7 +593,7 @@ a.btn.btn-lg.btn-primary.btn-block {
   border-radius: 0px;
   width: 300px;
   font-size: 1em;
-  /*word-spacing: -12px;*/
+  word-spacing: 5px;
   -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
 
 }
@@ -747,6 +747,4 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
 }
 .friend-count div {
   margin-top: -5%;
-
-
 }
