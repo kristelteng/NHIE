@@ -3,6 +3,7 @@
 @import "messages";
 @import "events";
 @import "search";
+@import "users";
 
 /*GLYPHICONS LINK*/
 @font-face {
@@ -48,6 +49,8 @@ html, body {
 }
 a {
   text-decoration: none !important;
+  color: #ff3427;
+  font-size: 16px;
 }
 .main-header {
   /*background: #606060;*/
@@ -385,10 +388,6 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
   border: 2px #ff3427 solid;
 }
 
-a {
-  color: #ff3427;
-}
-
 .over-form-right-line {
   width: 400px;
   margin-bottom: 0px;
@@ -639,3 +638,46 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   margin-top: 2%;
 }
 
+.user-action {
+  float: right;
+  margin-left: 10px;
+}
+
+.item-section {
+  margin-top: 20px;
+}
+
+.item-info > p {
+  color: #888;
+  font-size: 16px;
+}
+
+.item-info > a {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.item-info:first-letter {
+ text-transform: capitalize;
+}
+
+// label on left
+.item-label:before {
+  width: 25%;
+  margin-left: 75%;
+  border-top: 1px solid #CCC;
+  display: block;
+  content: "";
+  margin-bottom: 5px;
+}
+
+.item-label {
+  width: 150px;
+  position: absolute;
+  left: -175px;
+  text-align: right;
+  color: #CCC;
+  font-family: Cardoi99;
+  text-transform: uppercase;
+}
+// label on the left
