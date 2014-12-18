@@ -32,44 +32,6 @@ h3.event-title {
   font-size: 16px;
 }
 
-.event-section {
-  margin-top: 20px;
-}
-
-.event-info > p {
-  color: #888;
-  font-size: 16px;
-}
-
-.event-info > a {
-  text-transform: capitalize;
-  font-size: 16px;
-}
-.event-info:first-letter {
- text-transform: capitalize;
-}
-
-// label on left
-.event-label:before {
-  width: 25%;
-  margin-left: 75%;
-  border-top: 1px solid #CCC;
-  display: block;
-  content: "";
-  margin-bottom: 5px;
-}
-
-.event-label {
-  width: 150px;
-  position: absolute;
-  left: -175px;
-  text-align: right;
-  color: #CCC;
-  font-family: Cardoi99;
-  text-transform: uppercase;
-}
-// label on the left
-
 .event-attendance {
   margin: 75px 0;
   text-align: center;

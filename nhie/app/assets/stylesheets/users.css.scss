@@ -1,3 +1,19 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+  color: #444444;
+  font-family: Lato-Light;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.user-row {
+  line-height: 28px;
+}
+.user-content {
+  font-size: 20px;
+  font-family: Lato-regular;
+}
