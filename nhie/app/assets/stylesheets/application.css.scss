@@ -57,6 +57,7 @@
 html, body {
   min-height: 100%;
   font-family: Lato-Regular;
+  min-width: 300px;
   /*background-color:#e9e9e9;*/
 }
 a {
@@ -415,7 +416,8 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
 .flip-container {
   -webkit-perspective:1000;
   -moz-perspective:1000;
-  width: 600px;
+  width: 100%;
+  min-width: 300px;
   margin: auto;
 }
 .flipper {
@@ -426,7 +428,7 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
   height: 200px;
 }
 .front, .back {
-  width: 600px;
+  width: 100%;
   height: 200px;
   position: absolute;
   left: 0;
