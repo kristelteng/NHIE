@@ -441,8 +441,14 @@ input.btn.btn-lg.btn-primary.btn-block:hover{
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   background: #666666;
+  padding: 0 25px;
 }
-.front { z-index: 2;  color: #666666; border: 3px #444444 solid;}
+.front { 
+  z-index: 2;  
+  color: #666666; 
+  border: 3px #444444 solid;
+  padding: 0 25px;
+}
 
 .vertical-flip-container .back {
   -webkit-transform: rotateX(180deg);
