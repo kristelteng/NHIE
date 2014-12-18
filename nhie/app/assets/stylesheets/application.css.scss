@@ -4,6 +4,7 @@
 @import "events";
 @import "search";
 @import "users";
+@import "friends";
 
 /*GLYPHICONS LINK*/
 @font-face {
@@ -682,7 +683,7 @@ a.btn.btn-lg.btn-primary.btn-block:hover {
   border-top: 1px solid #CCC;
   display: block;
   content: "";
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .item-label {
