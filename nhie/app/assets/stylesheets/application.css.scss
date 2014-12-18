@@ -50,7 +50,7 @@
 }
 
 .main-large-logo > img {
-  width: 300px;
+  width: 400px;
   margin-top: 10px;
 }
 
@@ -83,6 +83,7 @@ a {
   top: -5%;
   color: white;
   font-size: 32px;
+  margin-top: 27px;
 }
 .page-wrap {
   position: relative;
@@ -113,12 +114,12 @@ a {
   transition: opacity 0.3s ease;
 }
 .flash_notice {
-	position: fixed;
-	margin-top: 5%;
+  position: fixed;
+  margin-top: 5%;
 }
 .nav-bar-title {
-	font-size: 19px;
-	margin-top: 5px;
+  font-size: 19px;
+  margin-top: 5px;
 }
 .toggle-menu{
   padding:5px;
@@ -161,6 +162,8 @@ nav.navbar.navbar-default.navbar-fixed-top {
 /*navbar search*/
 .navbar-form {
   background: none;
+    margin-top: 15px;
+
 }
 #search-form {
   /*background-color: white;*/
