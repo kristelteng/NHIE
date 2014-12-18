@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :events do |events|
     post :join
+    post :leave
     resources :messages, only: [:show, :new, :create, :destroy]
   end
   

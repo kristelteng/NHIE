@@ -35,6 +35,11 @@ class EventsController < ApplicationController
     redirect_to current_user
   end
 
+  def leave
+    event = Event.find(params[:event_id])
+    current_user.un_participate_in!(event)
+    redirect_to current_user
+  end
 
   def show
     @event = Event.find(params[:id])

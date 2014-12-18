@@ -36,13 +36,14 @@
     
 <!-- If the user created the event, show the delete button, or else if the user isnt participating in the event show the join button, or if they are show the you are attending note -->
 <% if @event.creator == current_user %> 
-<%= button_to "Delete Event", event_path(@event), {method: :delete, class: 'btn btn-default thin form-control event-button event-action delete-message'} %>
+  <%= button_to "Delete Event", event_path(@event), {method: :delete, class: 'btn btn-default thin form-control event-button event-action delete-message'} %>
 <% elsif %>
-<% if !current_user.participated_events.include?(@event) %>
-<%= button_to "Join Event", event_join_path(@event), method: :post, class: 'btn btn-default thin form-control event-button event-action delete-message'  %>
-<% elsif %>
-<h3 class="event-attendance"> You are attending this event!</h3>
-<% end %>
+  <% if !current_user.participated_events.include?(@event) %>
+    <%= button_to "Join Event", event_join_path(@event), method: :post, class: 'btn btn-default thin form-control event-button event-action delete-message'  %>
+  <% elsif %>
+    <%= button_to "Leave Event", event_leave_path(@event), method: :post, class: 'btn btn-default thin form-control event-button event-action delete-message'  %>
+    <h3 class="event-attendance"> You are attending this event!</h3>
+  <% end %>
 <% end %>
 
 

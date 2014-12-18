@@ -90,6 +90,10 @@ class User < ActiveRecord::Base
     event.participation.create(user: self)
   end
 
+  def un_participate_in!(event)
+    event.participation.find_by(user: self).destroy
+    # f.destroy
+  end
 
   #--------------------
   # junk drawer
