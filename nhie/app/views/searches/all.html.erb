@@ -4,7 +4,7 @@
 <%# end %>
 
 
-<h3 class="minor-heading">RESULTS</h3>
+<h3 class="minor-heading">MATCHED RESULTS: <%= @friend_event_matches.count + @created_event_matches.count + @friend_matches.count + @user_matches.count%></h3>
 
 <h1 class="main-heading">Friends Events</h1>
 <div class="results-div"><%= render @friend_event_matches %></div>

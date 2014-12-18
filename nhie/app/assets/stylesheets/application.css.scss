@@ -33,8 +33,12 @@
   font-family: Cardoi99;
   src: url('/fonts/Cardoi99.otf');
 }
-
+@font-face {
+  font-family: Entypo;
+  src: url('/fonts/Entypo.otf');
+}
 /*FONTS*/
+
 .main-large-logo {
   /*height: 300px;*/
   width: 300px;
@@ -134,7 +138,17 @@ nav.navbar.navbar-default.navbar-fixed-top {
   background-color: #414141;
   text-align: center;
 }
-
+.nav-bar-link {
+  float: left; 
+  margin-left: 62px;
+  margin-top: -70px;
+  font-size: 1.3em;
+  color: white;
+  font-family: Lato-Light;
+}
+.nav-bar-link:hover {
+  color: #ff3427;
+}
 /*navbar search*/
 .navbar-form {
 	margin-top: -70px;
@@ -156,7 +170,7 @@ input.btn.btn-default.search-submit{
     /*height: 28px;*/
     border: 2px white solid;
     background: none;
-    color: #ff3427;
+    color: white;
     font-family: Lato-Light;
     text-transform: uppercase;
     font-size: 1em;

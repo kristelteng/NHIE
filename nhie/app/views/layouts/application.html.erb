@@ -21,7 +21,8 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<%= image_tag("main-large-logo.png", class: 'main-large-logo')  %>
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+						<%= link_to "HOME", root_url, :method => :get, :class => 'nav-bar-link' %>
+    <!-- Brand and toggle get grouped for better mobile display {:class 'nav-bar-link'} -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -102,7 +103,6 @@
 			      &#8801;
 			    </a> -->
 			    <%#= render :partial => 'events_search' %>
-
 			  </header>
 			<% end %>
 		  <div class="content">
