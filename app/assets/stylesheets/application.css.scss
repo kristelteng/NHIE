@@ -40,7 +40,12 @@
   src: url('/fonts/Entypo.otf');
 }
 /*FONTS*/
-
+div.flash_notice {
+  margin-top: 120px;
+  margin-left: 20px;
+  font-family: Lato-Bold;
+  color: #ff3427;
+}
 .nhie-nav {
   padding-top: 15px;
 }
@@ -116,6 +121,14 @@ a {
 .flash_notice {
   position: fixed;
   margin-top: 5%;
+}
+.flash_alert {
+  float: right;
+  margin-right: -25px;
+  font-family: Lato-Bold;
+  color: #ff3427;
+  position: relative;
+  font-size: 1.5em;
 }
 .nav-bar-title {
   font-size: 19px;
@@ -201,7 +214,7 @@ input.btn.btn-default.search-submit:hover{
 /*navbar search*/
 
 .form-control {
-	/*height: 20px;*/
+  border-radius: 0px;
 }
 .btn.btn-default.thin{
 	padding: 0px 12px;
@@ -583,6 +596,10 @@ input.btn.btn-lg.btn-primary.btn-block.on-white:hover {
 }
 #event_event_name, #event_description, #event_location, #event_url {
   border-color: #888888;
+}
+.white-background  {
+  color: #888888;
+  font-family: Lato-Bold;
 }
 
 a.btn.btn-lg.btn-primary.btn-block {

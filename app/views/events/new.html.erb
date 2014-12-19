@@ -2,28 +2,28 @@
 <hr>
 <%= form_for (@event) do |f| %>
 	<div class="field">
-		<%= f.label :event_name %><br />
-		<%= f.text_field :event_name, class: 'form-control', placeholder: 'Event Name' %>
-	</div>
+		<%= f.label :event_name, class: 'white-background' %><br />
+		<%= f.text_field :event_name, class: 'form-control', placeholder: "What've you never done?" %>
+	</div><br />
 
 	<div class="field">
-		<%= f.label :description %><br />
-		<%= f.text_area :description, class: 'form-control', placeholder: 'Description' %>
-	</div>
+		<%= f.label :description, class: 'white-background' %><br />
+		<%= f.text_area :description, class: 'form-control', placeholder: "Ex. Why haven't you done this yet?" %>
+	</div><br />
 
 	<div class="field">
-		<%= f.label :event_datetime %><br />
+		<%= f.label :event_datetime, class: 'white-background' %><br />
 		<%= f.datetime_select :event_datetime,  class: 'datetime-buttons', placeholder: 'Date & Time' %>
-	</div>
+	</div><br />
 
 	<div class="field">
-		<%= f.label :location %><br />
-		<%= f.text_field :location, class: 'form-control', placeholder: 'Location' %>
-	</div>
+		<%= f.label :location, class: 'white-background' %><br />
+		<%= f.text_field :location, class: 'form-control', placeholder: "Where's this happnin'?" %>
+	</div><br />
 
 	<div class="field">
-		<%= f.label :url %><br />
-		<%= f.text_field :url,  class: 'form-control', placeholder: 'Website' %>
+		<%= f.label :url, class: 'white-background' %><br />
+		<%= f.text_field :url,  class: 'form-control ', placeholder: 'Optional' %>
 	</div><br><br>
 	
 	<div id="sumbit">

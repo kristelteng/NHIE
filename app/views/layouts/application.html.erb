@@ -9,12 +9,7 @@
 		  <!-- ++++++++++++++ -->
 		</head>
 	<body class="<%= controller_name %> <%= action_name %>">
-		<!-- checking for error messages -->
-		<% flash.each do |name, msg| %>
-		  <% if msg.is_a?(String) %>
-		    <%= content_tag :div, msg, :class => "flash_#{name}" %>
-		  <% end %>
-		<% end %>
+
 	<!-- ++++++//WED NAV BAR\\++++++ -->
 
 <% if logged_in? %>
@@ -31,7 +26,7 @@
       <!-- <form class="navbar-form navbar-right" role="search"> THIS HAS THE -->
         <!-- <div class="form-group"> -->
           <%= form_tag all_search_path, class: 'navbar-form navbar-right form-group form-control'  do %>
-            <%= text_field_tag "query", nil, placeholder: 'Search' %>
+            <%= text_field_tag "query", nil, placeholder: '  Search' %>
             <%= submit_tag "Search", class: "btn btn-default search-submit" %>
           <% end %>
           <!-- <input type="text" class="form-control" placeholder="Search"> -->
@@ -113,7 +108,13 @@
 			<% end %>
 		  <div class="content">
 		      <div class="col-sm-6 col-sm-offset-3">
-		         <%= yield %>
+		        <%= yield %>
+		         		<!-- checking for error messages -->
+						<% flash.each do |name, msg| %>
+						  <% if msg.is_a?(String) %>
+						    <%= content_tag :div, msg, :class => "flash_#{name}" %>
+						  <% end %>
+						<% end %>
 		      </div>
 		  </div> 
 		</div>
