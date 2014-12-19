@@ -35,6 +35,21 @@
   <% end %>
 </div>
 
+<%# unless @user = current_user %>
+  <% if current_user.friends?(@user)  %>
+    <p class="status-right-justified">You are friends</p>
+  <% elsif current_user.already_requested?(@user) %>
+    <p class="status-right-justified">Request Sent</p>
+  <% else %>
+  <!-- ++++++++ ADD BUTTON ++++++++ -->
+    <%= link_to user_request_friendship_path(@user), method: :post, class: "user-action" do %>
+      <i class="glyphicon glyphicon-plus-sign"></i>
+    <% end %>
+  <!-- ++++++++ ADD BUTTON ++++++++ -->
+  <% end %>
+<%# end %>
+
+
 <h1 class="main-heading"><%= @user.username %></h1>
 <hr>
 
