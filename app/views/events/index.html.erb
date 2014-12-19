@@ -1,65 +1,69 @@
 <h1 class="main-heading">Events.</h1>
 <hr>
-
 <%#= render :partial => 'events_search' %>
 
 <%= link_to new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' do %>
 	<span class="glyphicon glyphicon-plus"></span> CREATE A NEW EVENT 
 <% end %>
 
-<%#= link_to "Create a new Event!", new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' %>
+<% if (@created_events.count + @friends_events.count) == 0 %>
+  <br><h3 class="no-events-yet">No events yet... why don't you get the ball rolling?</h3>
+<% else %>
 
-<!-- Below must be tested -->
-<div class="item-section">
-	<div class="item-label">My events</div>
-	<% @created_events.each do |event| %>
-		<!-- FLIPPING CONTAINER -->
-		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
-		  <div class="flipper">
-		    <div class="front">
-		      <!-- The front face -->
-					<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
-		    </div>
+	<%#= link_to "Create a new Event!", new_event_path, class: 'btn btn-lg btn-primary btn-block on-white' %>
 
-
-		    <div class="back">
-		       <!-- The back face -->
-		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
-		      <hr class="event-index-card-lines">
-					<p class="event-description"><%= event.description.truncate(200) %></p><br />
-		    </div>
-
-
-		  	<div class="clear"></div>
-			</div>
-		</div>
-		<div class="clear"></div><br>
-		<!-- FLIPPING CONTAINER -->
-	<% end %>
-</div>
-
-
-<div class="item-section">
-	<div class="item-label">Friend events</div>
-	<% @friends_events.each do |event| %>
-			
+	<!-- Below must be tested -->
+	<div class="item-section">
+		<div class="item-label">My events</div>
+		<% @created_events.each do |event| %>
 			<!-- FLIPPING CONTAINER -->
-		<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
-		  <div class="flipper">
-		    <div class="front">
-		      <!-- The front face -->
-					<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
-		    </div>
-		    <div class="back">
-		       <!-- The back face -->
-		      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
-		      <hr class="event-index-card-lines">
-					<p class="event-description"><%= event.description.truncate(200) %></p><br />
-		    </div>
-		  	<div class="clear"></div>
+			<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
+			  <div class="flipper">
+			    <div class="front">
+			      <!-- The front face -->
+						<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
+			    </div>
+
+
+			    <div class="back">
+			       <!-- The back face -->
+			      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
+			      <hr class="event-index-card-lines">
+						<p class="event-description"><%= event.description.truncate(200) %></p><br />
+			    </div>
+
+
+			  	<div class="clear"></div>
+				</div>
 			</div>
-		</div>
-		<div class="clear"></div><br>
-		<!-- FLIPPING CONTAINER -->
-	<% end %>
-</div>
+			<div class="clear"></div><br>
+			<!-- FLIPPING CONTAINER -->
+		<% end %>
+	</div>
+
+
+	<div class="item-section">
+		<div class="item-label">Friend events</div>
+		<% @friends_events.each do |event| %>
+				
+				<!-- FLIPPING CONTAINER -->
+			<div class="vertical-flip-container flip-container floatR" ontouchstart="this.classList.toggle('hover');">
+			  <div class="flipper">
+			    <div class="front">
+			      <!-- The front face -->
+						<h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-dark" %></h3>
+			    </div>
+			    <div class="back">
+			       <!-- The back face -->
+			      <h3><%= link_to event.event_name, event_path(event), class: "event-list-titles-light" %></h3>
+			      <hr class="event-index-card-lines">
+						<p class="event-description"><%= event.description.truncate(200) %></p><br />
+			    </div>
+			  	<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div><br>
+			<!-- FLIPPING CONTAINER -->
+		<% end %>
+	</div>
+<% end %>

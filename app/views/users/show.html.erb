@@ -13,8 +13,23 @@
   <% if @user == current_user %> 
     <div class="all-items">
       <div class="friend-count">
-        <div><%= current_user.friends.count %></div><br>
-        <em>friends</em>
+        <div>
+          <%= current_user.friends.count %>
+        </div>
+        <br>
+          <% if (current_user.friends.count > 300) %>
+            <em>"Mr./ Mrs Popular"</em>
+          <% elsif (current_user.friends.count > 100) %>
+            <em>"Local Hero."</em>
+          <% elsif (current_user.friends.count > 50) %>
+            <em>"Challenge: get more than 10 friends."</em>
+          <% elsif (current_user.friends.count > 10) %>
+            <em>"Tight friends cirles for life."</em>
+          <% elsif (current_user.friends.count == 1) %>
+            <em>"Woo! Someone has a friend!"</em>
+          <% else %>
+            <em>"Someone needs a friend."</em>
+          <% end %>
       </div>
     </div>  
   <% end %>
@@ -65,7 +80,7 @@
 
   <% if @user == current_user %>
     <div class="item-section">
-      <div class="item-label">good ol' friends</div>
+      <div class="item-label">Friends</div>
       <div class="item-info friends">
         <% if @user.friends.empty? %>
           You do not have any friends yet

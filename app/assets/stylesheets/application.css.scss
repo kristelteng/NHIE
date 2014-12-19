@@ -130,6 +130,14 @@ a {
   position: relative;
   font-size: 1.5em;
 }
+.alert {
+  float: right;
+  margin-right: -25px;
+  font-family: Lato-Bold;
+  color: #ff3427;
+  position: relative;
+  font-size: 1.5em;
+}
 .nav-bar-title {
   font-size: 19px;
   margin-top: 5px;
@@ -610,7 +618,7 @@ a.btn.btn-lg.btn-primary.btn-block {
   border-radius: 0px;
   width: 300px;
   font-size: 1em;
-  word-spacing: 5px;
+  word-spacing: 2px;
   -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
 
 }
