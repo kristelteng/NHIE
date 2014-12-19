@@ -63,6 +63,10 @@ input.btn.btn-default.thin.form-control.event-button.delete-message {
   margin-top: 5px;
   width: 300px;
   color: white;
+  height: 36px;
+  font-family: Lato-Light;
+  text-transform: uppercase;
+
 }
 
 input.btn.btn-default.thin.form-control.event-button.delete-message:hover {
@@ -76,13 +80,18 @@ input.btn.btn-default.thin.form-control.event-button.create-message{
   float: right;
   width: 300px;
   border: 2px #888888 solid;
-   font-family: Lato-Bold;
+  font-family: Lato-Light;
+  height: 36px;
+  text-transform: uppercase;
+  color: #888888;
 }
 input.btn.btn-default.thin.form-control.event-button.create-message:hover {
   float: right;
   width: 300px;
   border: 2px #ff3427 solid;
-  font-family: Lato-Bold;
+  background-color: #ff3427;
+  font-family: Lato-Light;
+  color: white;
 }
 
 

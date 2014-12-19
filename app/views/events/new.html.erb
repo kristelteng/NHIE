@@ -1,5 +1,5 @@
 <h1 class="main-heading">Create.</h1>
-<hr>
+<hr><br>
 <%= form_for (@event) do |f| %>
 	<div class="field">
 		<%= f.label :event_name, class: 'white-background' %><br />
@@ -24,7 +24,7 @@
 	<div class="field">
 		<%= f.label :url, class: 'white-background' %><br />
 		<%= f.text_field :url,  class: 'form-control ', placeholder: 'Optional' %>
-	</div><br><br>
+	</div><br><br><br>
 	
 	<div id="sumbit">
 		<%= f.submit "Submit", class: 'btn btn-lg btn-primary btn-block on-white' %>
