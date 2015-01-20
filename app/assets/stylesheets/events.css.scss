@@ -5,7 +5,8 @@
 .event-header {
   text-align: center;
   /*// border: px #888888 solid;*/
-  border: 3px #444444 solid;
+  border: 3px #fff solid;
+  background-color: white;
   margin-top: 8%;
   margin-bottom: 8%;
   padding: 0 10px 10px 16px;
@@ -16,21 +17,32 @@
 }
 
 h3.event-title {
-  // color: #888888;
-  color: black;
-  font-size: 2.3em;
-  font-family: 'Lato-light';
+  /*color: #888888;*/
+  font-weight: bolder;
+  color: #888888;
+  font-size: 3.7em;
+  font-family: 'Norwester';
+  letter-spacing: 1px;
   text-transform: uppercase;
   word-wrap: break-word;
   margin-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 95px;
 }
-
 
 .byline {
-  color: #FF3427;
-  font-size: 16px;
+    margin-top: -20px;
+
 }
+
+.byline a {
+  color: #7D7483;
+  font-size: 16px;
+  margin-top: -20px;
+}
+.byline a:hover {
+  color:  #EA5A50;
+}
+
 
 .event-attendance {
   margin: 75px 0;
@@ -57,8 +69,8 @@ h3.event-title {
 }
 
 input.btn.btn-default.thin.form-control.event-button.delete-message {
-  border: 2px #ff3427 solid;
-  background-color: #ff3427;
+  border: 2px #EA5A50 solid;
+  background-color: #EA5A50;
   box-shadow: none;
   margin-top: 5px;
   width: 300px;
@@ -79,11 +91,12 @@ input.btn.btn-default.thin.form-control.event-button.delete-message:hover {
 input.btn.btn-default.thin.form-control.event-button.create-message{
   float: right;
   width: 300px;
-  border: 2px #888888 solid;
+  border: 2px #7D7483 solid;
   font-family: Lato-Light;
   height: 36px;
   text-transform: uppercase;
-  color: #888888;
+  color: #fff;
+  background-color: #7D7483;
 }
 input.btn.btn-default.thin.form-control.event-button.create-message:hover {
   float: right;
@@ -103,4 +116,30 @@ input.btn.btn-default.thin.form-control.event-button.event-action {
   margin-top: 80px;
   font-family: Lato-Light;
   color: #888888;
+}
+
+.white-backer {
+  height: 250px;
+  width: 300%;
+  background-color: white;
+  margin-right: 100%;
+  margin-left: -100%;
+  margin-top: -25%;
+  box-shadow: inset 0px -5px 10px 0px rgba(227, 227, 227, 0.75);
+}
+
+.top-space {
+  height: 35px;
+}
+
+.not-found {
+  text-align: center;
+  padding-top: 55px;
+}
+.lost-box {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 15px 0px rgba(221,220,220,0.75);
+  margin-top: 20%;
 }

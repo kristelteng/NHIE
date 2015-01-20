@@ -15,8 +15,8 @@ h1{
 }
 
 .user-row {
-  line-height: 28px;
-  border-bottom: 1px dotted #CCC;
+  line-height: 40px;
+  border-bottom: 1px solid #e2e2e2;
 }
 .user-content {
   font-size: 20px;
@@ -32,7 +32,7 @@ h1{
 
 .friend-count > div {
   font-size: 70px;
-  color: #ff3427;
+  color: #EA5A50;
   font-family: Lato-bold;
 }
 
@@ -42,7 +42,9 @@ h1{
 
 .glyphicon.glyphicon-send {
   float: right;
-  color: #ff3427;
+  color: #EA5A50;
+  margin-top: -30px;
+  font-size: 25px;
 }
 
 a.user-action > i:hover {
@@ -51,6 +53,63 @@ a.user-action > i:hover {
 
 .status-right-justified {
   float: right;
-  color: #ff3427;
+  color: #EA5A50;
   font-family: Lato-Bold;
+}
+.command-center {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  box-shadow:0px 2px 15px 0px rgba(221, 220, 220, 0.75);
+}
+.inner-command-left {
+  width: 33%;
+  height: 80%;
+  display: inline-block;
+  margin-top: 30px;
+}
+.inner-command-center {
+  width: 33%;
+  height: 80%;
+  display: inline-block;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  /*margin-bottom: 15px;*/
+}
+.inner-command-right {
+  width: 33%;
+  height: 80%;
+  display: inline-block;
+  /*margin-bottom: 15px;*/
+}
+
+.inner-command-label {
+  text-align: center;
+  margin-top: 0;
+  font-size: 18px;
+  font-family: Lato-Light;
+  font-weight: 700;
+  color: #cccccc;
+}
+
+.command-number {
+  font-size: 70px;
+  text-align: center;
+  font-family: Norwester;
+  color: #EA5A50;
+}
+.left-action{
+  font-size: 25px;
+  float: initial;
+  vertical-align: middle;
+}
+a.user-action.left-action {
+  float: initial;
+}
+
+.green-icon {
+  color: #3B8C3B;
+}
+.centered {
+  text-align: center;
 }

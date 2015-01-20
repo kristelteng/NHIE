@@ -9,26 +9,32 @@
   float: left;
   border: 1px solid transparent; // to have the same position as the message box
 }
+.message-avatar img {
+    border-radius: 50%;
+}
 .message-box {
   width: 80%;
   float: left;
   position: relative;
   color: #888888;
   font-family: Lato-Light;
-  background: none repeat scroll 0% 0% #F2f2f2;
+  background: none repeat scroll 0% 0% #fff;
   padding: 10px 20px 10px;
-  border: 1px solid #EEE;
-  border-radius: 4px;
+  /*border: 1px solid #EEE;*/
+  /*border-radius: 4px;*/
   margin: -65px 0px 20px 80px;
+  box-shadow: 0px 2px 15px 0px rgba(221, 220, 220, 0.75);
 }
 
 .message-title {
-  border-bottom: 1px solid #dcdcdc;
+  /*border-bottom: 1px solid #dcdcdc;*/
   font-size: 13px;
 }
 
 .message-timestamp {
   float: right;
+  margin-top: -30px;
+  color: #cccccc;
 }
 
 p {
@@ -44,7 +50,18 @@ p {
   word-wrap: break-word;
 }
 
-em.text-red {
+p.text-red {
   font-family: Lato-Bold;
-  font-size: 1em;
+  font-size: 1.5em;
+  color: #7D7483;
+}
+
+form#new_message {
+  margin-top: 50px;
+}
+
+.text-form-heading {
+  font-family: Lato-Bold;
+  color: #CCCCCC;
+  letter-spacing: 1px;
 }

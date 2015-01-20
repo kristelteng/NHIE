@@ -1,12 +1,13 @@
 <!-- Page is in a large if statement that will only show the event page if you are friends with that user. If you aren't friends with that user then it says 404 not found. -->
 <% if @friends_events = current_user.friends.map(&:created_events).flatten.include?(@event) || current_user.created_events.flatten.include?(@event) %>
-
-<div class="event-header">
-  <h3 class="event-title"><%= @event.event_name %></h3>
-  <div class="byline">- <%= link_to @event.creator.first_name, user_path(@event.creator) %> -
+<div class="white-backer">
+  <div class="event-header">
+    <h3 class="event-title"><%= @event.event_name %></h3>
+    <div class="byline">- <%= link_to @event.creator.first_name, user_path(@event.creator) %> -
+    </div>
   </div>
 </div>
-
+<div class="top-space"></div>
 <div class="item-section">
   <div class="item-label">description</div>
   <div class="item-info">
@@ -65,6 +66,7 @@
 </div>
 
 <div class="field">
+<h4 class="text-form-heading">Speak your mind.</h4>
   <%= f.text_area :body %>
 </div><br>
 
@@ -74,5 +76,7 @@
 <% end %>
 
 <% else %>
-<h1>404, page not found</h1>
+<div class="lost-box">
+  <h1 class="not-found">Nothing to see here... <br>Move along.</h1>
+</div>
 <% end %>

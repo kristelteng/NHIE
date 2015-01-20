@@ -18,7 +18,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4">
-    <%= link_to image_tag("main-large-logo_2.png"), root_url, class: 'nav-bar-link main-large-logo' %>
+    <%= link_to image_tag("main-large-logo_3.png"), root_url, class: 'nav-bar-link main-large-logo' %>
       </div>
       <div class="col-sm-4">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -63,8 +63,8 @@
 					<div class="sidebar-photo">
 						<%= image_tag(current_user.image, size: "200x200") %>
 					</div>
-					<h1 class="sidebar-name">Howdy, <%=current_user.username %>!</h1>
-					<hr class="sidebar-hr">
+					<h1 class="sidebar-name">Howdy, <strong><%=current_user.username %>!</strong></h1>
+					<!-- <hr class="sidebar-hr"> -->
 					<div class="sidebar-links">
 						<%#= link_to("Profile", user_url(current_user)) %>
 						<%#= link_to("Events", events_url)%>
@@ -95,10 +95,10 @@
 			      &#8801;
 			    </a> -->
 			    <a href="#main-nav" class="open-menu toggle-menu">
-			    	<span class="glyphicon glyphicon-tasks"></span>
+			    	<span class="glyphicon glyphicon-chevron-right"></span>
 			    </a>
  					<a href="#" class="close-menu toggle-menu">
- 						<span class="glyphicon glyphicon-tasks"></span>
+ 						<span class="glyphicon glyphicon-chevron-left"></span>
  					</a>
 			    <!-- <a href="#" class="close-menu toggle-menu">
 			      &#8801;

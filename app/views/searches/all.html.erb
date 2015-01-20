@@ -3,20 +3,18 @@
   <%#= submit_tag "Search" %>
 <%# end %>
 
+<div class="results-box">
+	<h3 class="minor-heading">MATCHED RESULTS: <%= @friend_event_matches.count + @created_event_matches.count + @friend_matches.count + @user_matches.count%></h3>
+</div>
 
-<h3 class="minor-heading">MATCHED RESULTS: <%= @friend_event_matches.count + @created_event_matches.count + @friend_matches.count + @user_matches.count%></h3>
-
-<h1 class="main-heading">Friends Events</h1>
+<h1 class="main-heading">Friends Events<hr></h1>
 <div class="results-div"><%= render @friend_event_matches %></div>
-<hr>
 
-<h1 class="main-heading">My Events</h1>
+<h1 class="main-heading">My Events<hr></h1>
 <div class="results-div"><%= render @created_event_matches %></div>
-<hr>
 
-<h1 class="main-heading">Friends</h1>
+<h1 class="main-heading">Friends<hr></h1>
 <div class="results-div"><%= render @friend_matches %></div>
-<hr>
 
-<h1 class="main-heading">ALL SEARCH</h1>
+<h1 class="main-heading">ALL SEARCH<hr></h1>
 <div class="results-div"><%= render @user_matches %></div>

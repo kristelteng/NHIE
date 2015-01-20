@@ -5,37 +5,39 @@
 <div id="signup-logos"></div>
 
 
-  <div class="signin-logo1"></div>
-<div class="login-container">
-  <div class="form-signin">
+<div class="signin-logo1"></div>
+  <div class="transparent-bg">
+    <div class="form-signin">
+      
+      <h3 class="Signin-page-heading">LOGIN.</h3>
+      <!-- <hr class="Signin-page-line"> -->
+      <!-- <h2>Log in</h2> -->
+      <%= form_tag user_sessions_path, :method => :post do %>
+        <div>
+          <%= label_tag :username %><br />
+          <%= text_field_tag :username, params[:username], class: 'form-control', placeholder: 'Username' %>
+        </div>
 
-  <h3 class="Signin-page-heading">LOGIN.</h3>
-  <hr class="Signin-page-line">
-  <!-- <h2>Log in</h2> -->
-  <%= form_tag user_sessions_path, :method => :post do %>
-    <div>
-      <%= label_tag :username %><br />
-      <%= text_field_tag :username, params[:username], class: 'form-control', placeholder: 'Username' %>
+        <div class="field">
+          <%= label_tag :password %><br />
+          <%= password_field_tag :password, params[:password], class: 'form-control', placeholder: 'password' %>
+        </div>
+
+        <div class="field">
+          <%= check_box_tag :remember_me %>
+          <%= label_tag :remember_me, params[:remember_me],  class: "checkbox" %>
+        </div><br>
+
+        <div class="actions">
+          <%= submit_tag "Login", class: 'btn btn-lg btn-primary btn-block' %>
+        </div><br />
+      <% end %>
+
+      <%= link_to "Sign up", new_user_path %>
+
+
+      </div>
+    <div class="login-container">
     </div>
-
-    <div class="field">
-      <%= label_tag :password %><br />
-      <%= password_field_tag :password, params[:password], class: 'form-control', placeholder: 'password' %>
-    </div>
-
-    <div class="field">
-      <%= check_box_tag :remember_me %>
-      <%= label_tag :remember_me, params[:remember_me],  class: "checkbox" %>
-    </div><br>
-
-    <div class="actions">
-      <%= submit_tag "Login", class: 'btn btn-lg btn-primary btn-block' %>
-    </div><br />
-  <% end %>
-
-  <%= link_to "Sign up", new_user_path %>
-
-
   </div>
-</div>
 </div>

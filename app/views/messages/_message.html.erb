@@ -8,7 +8,7 @@
 
       <div class="message-title">
         <% if message.user != nil %>
-        <em class="text-red"><%= message.user.username %></em>
+        <p class="text-red"><%= message.user.username %></p>
         <span class="message-timestamp"><%= message.created_at.strftime("%d %b. %Y %H:%M") %></span>
 
       </div>

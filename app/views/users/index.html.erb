@@ -1,7 +1,7 @@
-<h1>FRIENDS.</h1>
-<hr>
+<h1 class="main-heading">FRIENDS.</h1>
+<!-- <hr> -->
 
-<div class="item-section">
+<div class="item-section bottom-space">
 	<div class="item-label">Friends</div>		
 	<div class="item-info friends">
 		<div class="user-content">
@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<div class="item-section">
+<div class="item-section bottom-space">
 	<div class="item-label">Incoming Requests</div>		
 	<div class="item-info friends">
 		<div class="user-content">
@@ -44,7 +44,7 @@
 	</div>
 </div>
 
-<div class="item-section">
+<div class="item-section bottom-space">
 	<div class="item-label">Sent Requests</div>		
 	<div class="item-info friends">
 		<div class="user-content">
@@ -52,15 +52,15 @@
 				<p>No pending requests</p>
 			<% else %>
 				<% @ofr.each do |user| %>
-					<i class="glyphicon glyphicon-send"></i>
 					<div class="user-row"><%= link_to user.username, user_path(user) %></div> 
+					<i class="glyphicon glyphicon-send"></i>
 				<% end %> 
 			<% end %>
 		</div>
 	</div>
 </div>
 
-<div class="item-section">
+<div class="item-section bottom-space">
 	<div class="item-label">Strangers</div>
 	<div class="item-info friends">
 		<div class="user-content">

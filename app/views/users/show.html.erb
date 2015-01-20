@@ -1,57 +1,68 @@
 
-<div class="profile-background">
-  <div class="profile-background1">
-      <%= image_tag @user.image_url %>
-  </div>
-  <div class="profile-background2">
-      <%= image_tag @user.image_url %>
-  </div>
-</div>
+<div class="profile-background ">
 
-<div class="profile-photo">
-  <%= image_tag @user.image_url %>
-  <% if @user == current_user %> 
-    <div class="all-items">
-      <div class="friend-count">
-        <div>
-          <%= current_user.friends.count %>
-        </div>
-        <br>
-          <% if (current_user.friends.count > 300) %>
-            <em>"Mr./ Mrs Popular"</em>
-          <% elsif (current_user.friends.count > 100) %>
-            <em>"Local Hero."</em>
-          <% elsif (current_user.friends.count > 50) %>
-            <em>"Challenge: Get more than 50 friends."</em>
-          <% elsif (current_user.friends.count > 10) %>
-            <em>"Tight friends cirles for life."</em>
-          <% elsif (current_user.friends.count == 1) %>
-            <em>"Woo! Someone has a friend!"</em>
-          <% else %>
-            <em>"Someone needs a friend."</em>
-          <% end %>
-      </div>
-    </div>  
-  <% end %>
-</div>
-
-<%# unless @user = current_user %>
-  <% if current_user.friends?(@user)  %>
-    <p class="status-right-justified">You are friends</p>
-  <% elsif current_user.already_requested?(@user) %>
-    <p class="status-right-justified">Request Sent</p>
-  <% else %>
-  <!-- ++++++++ ADD BUTTON ++++++++ -->
-    <%= link_to user_request_friendship_path(@user), method: :post, class: "user-action" do %>
-      <i class="glyphicon glyphicon-plus-sign"></i>
+  <div class="profile-photo">
+    <%= image_tag @user.image_url %>
+    <% if @user == current_user %>  
     <% end %>
-  <!-- ++++++++ ADD BUTTON ++++++++ -->
-  <% end %>
-<%# end %>
+  </div>
+
+  <h1 class="main-heading centered"><%= @user.username %>
+    <%# unless @user = current_user %>
+      <% if current_user.friends?(@user)  %>
+        <!-- <p class="status-right-justified">You are friends</p> -->
+        <i class="glyphicon glyphicon-ok-sign left-action green-icon"></i>
+
+      <% elsif current_user.already_requested?(@user) %>
+        <p class="status-right-justified">Request Sent</p>
+      <% else %>
+      <!-- ++++++++ ADD BUTTON ++++++++ -->
+        <%= link_to user_request_friendship_path(@user), method: :post, class: "user-action left-action" do %>
+          <i class="glyphicon glyphicon-plus-sign"></i>
+        <% end %>
+      <!-- ++++++++ ADD BUTTON ++++++++ -->
+      <% end %>
+    <%# end %>
+  </h1>
+  <!-- </div> -->
+</div>
+
+<!-- <div class="command-center">
+  
+</div> -->
 
 
-<h1 class="main-heading"><%= @user.username %></h1>
-<hr>
+<!-- <hr> -->
+
+<div class="command-center">
+  <div class="inner-command-left">
+    <div class="top-inner">
+      <h2 class="inner-command-label">FRIENDS</h2>
+    </div>
+    <div class="bottom-inner">
+      <h1 class="command-number"><%= @user.friends.count %></h1>
+    </div>
+  </div>
+
+  <div class="inner-command-center">
+    <div class="top-inner">
+      <h2 class="inner-command-label">EVENTS</h2>
+    </div>
+    <div class="bottom-inner">
+      <h1 class="command-number"><%= @user.created_events.count %></h1>
+    </div>
+  </div>
+  <div class="inner-command-right">
+    <div class="top-inner">
+      <h2 class="inner-command-label">SCORE</h2>
+    </div>
+    <div class="bottom-inner">
+      <h1 class="command-number">
+        <%=((@user.created_events.count)*200)+((@user.participated_events.count)*125)+((@user.friends.count)*75)%>
+      </h1>
+    </div>
+  </div>
+</div>
 
 <div class="all-items">
   <div class="item-section">

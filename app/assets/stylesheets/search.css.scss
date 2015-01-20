@@ -2,15 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .minor-heading {
-	font-size: 1em;
+	font-size: 2em;
 	font-family: Lato-Bold;
-	color: #ff3427;
+	color: #7D7483;
 	margin-top: 10%;
+	padding-top: 35px;
 }
 .results-div div h3  a {
 	font-family: Lato-Regular;
 	font-size: 1em;
-	color: #888888;
+	color: #EA5A50;
 }
 .results-div div h3  a:hover {
 	font-family: Lato-Regular;
@@ -26,3 +27,16 @@
 	padding: 30px;
 	margin-top: -55px;
 }*/
+
+.results-div {
+	/*margin-top: -25px;*/
+	margin-left: 50px;
+}
+
+.results-box {
+	width: 100%;
+	background-color:#fff;
+	height: 100px;
+	text-align: center;
+	box-shadow: 0px 2px 15px 0px rgba(221,220,220,0.75);
+}
