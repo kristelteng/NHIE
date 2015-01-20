@@ -3,7 +3,7 @@
 <div class="white-backer">
   <div class="event-header">
     <h3 class="event-title"><%= @event.event_name %></h3>
-    <div class="byline">- <%= link_to @event.creator.first_name, user_path(@event.creator) %> -
+    <div class="byline"><%= link_to @event.creator.first_name, user_path(@event.creator) %>
     </div>
   </div>
 </div>
@@ -31,7 +31,7 @@
 
 <div class="item-section">
   <div class="item-info">
-    <%= link_to "website", "http://#{@event.url}" %>
+     <i class="fa fa-external-link"></i> <%= link_to "website", "http://#{@event.url}" %>
   </div>
 </div>
     

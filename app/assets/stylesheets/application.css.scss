@@ -65,14 +65,14 @@ div.flash_notice {
 .main-large-logo > img {
   width: 500px;
   margin-top: 10px;
-  transition: width 0.4s ease-in;
+  transition: width 0.4s ease-out;
 
 }
 .main-large-logo > img:hover {
-  width: 410px;
+  width: 490px;
   /*margin-left: -5px;*/
   margin-top: 10px;
-    transition: width 0.4s ease-in;
+    transition: width 0.4s ease-out;
     /*transition: margin-left 0.6s ease;*/
 }
 .container-fluid {
@@ -359,7 +359,7 @@ div#signup-logos {
   background-image: image-url("NHIE_logo_animation_1.gif");
   background-position: 50% 50%;
   background-size: contain;
-  height: 200px;
+  height: 150px;
   width: 35%;
   margin-left: auto;
   margin-right: auto;
@@ -432,8 +432,8 @@ label {
 }
 
 form#new_user label {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-family: Lato-Light;
 }
 
@@ -451,7 +451,7 @@ form#new_user label {
   color: #CCCCCC;
   font-family: Lato-Bold;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 22px;
 }
 .Signin-page-line {
   margin-bottom: 30px;
@@ -481,7 +481,9 @@ input#user_image {
 input#username:focus, input#password:focus {
   outline:none;
 }
-
+form#new_user {
+  margin-top: -20px;
+}
 /*SIGN IN CHECKBOX */
 label.checkbox {
   display: inline;
@@ -614,7 +616,7 @@ p.event-description {
     height: initial;
   width: 80%;
   border-radius: 50%; 
-  border: 4px white solid;
+  border: 3px white solid;
 }
 .sidebar-links> a {
   text-align: center;
@@ -634,11 +636,11 @@ p.event-description {
   opacity: 100;
   background-color: #EA5A50;
   /*margin-top: 5%;*/
-  margin: 0;
+  margin-top: 1px;
   padding: 10;
   font-family: Lato-Light;
   font-size: 1em;
-  border: 1px rgba(60, 60, 60, 0.25) solid;
+  border: 0px rgba(60, 60, 60, 0.25) solid;
   text-transform: uppercase;
   transition: background-color 0.5s ease;
 }

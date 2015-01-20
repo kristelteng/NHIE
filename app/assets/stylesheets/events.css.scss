@@ -5,8 +5,8 @@
 .event-header {
   text-align: center;
   /*// border: px #888888 solid;*/
-  border: 3px #fff solid;
-  background-color: white;
+  /*border: 3px #fff solid;*/
+  /*background-color: white;*/
   margin-top: 8%;
   margin-bottom: 8%;
   padding: 0 10px 10px 16px;
@@ -20,13 +20,14 @@ h3.event-title {
   /*color: #888888;*/
   font-weight: bolder;
   color: #888888;
-  font-size: 3.7em;
+  font-size: 3.4em;
   font-family: 'Norwester';
   letter-spacing: 1px;
   text-transform: uppercase;
   word-wrap: break-word;
   margin-bottom: 30px;
-  margin-top: 95px;
+  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .byline {
@@ -119,13 +120,15 @@ input.btn.btn-default.thin.form-control.event-button.event-action {
 }
 
 .white-backer {
-  height: 250px;
-  width: 300%;
-  background-color: white;
-  margin-right: 100%;
-  margin-left: -100%;
-  margin-top: -25%;
-  box-shadow: inset 0px -5px 10px 0px rgba(227, 227, 227, 0.75);
+  color: #fff;
+  z-index: 2;  
+  color: #666666; 
+  height: 200px;
+  /*border: 3px #444444 solid;*/
+  background-color: #fff;
+  padding: 0 25px;
+  box-shadow: 0px 2px 15px 0px rgba(221, 220, 220, 0.75);
+  margin-top: 10%;
 }
 
 .top-space {
@@ -142,4 +145,7 @@ input.btn.btn-default.thin.form-control.event-button.event-action {
   background-color: #fff;
   box-shadow: 0px 2px 15px 0px rgba(221,220,220,0.75);
   margin-top: 20%;
+}
+i.fa.fa-external-link {
+  color: #bbbbbb;
 }
